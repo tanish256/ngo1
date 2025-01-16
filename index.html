@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ngo1</title>
+    <title>Walda Children Foundation</title>
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Kaushan+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Jomhuria&family=Kaushan+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -15,7 +18,7 @@
       <header>
         <img class="bg" src="images/MainBg.jpg" alt="">
         <nav>
-          <div class="logo"><img src="images/logo1.png" alt=""></div>
+          <div class="logo"><img src="images/logo2.png" alt=""></div>
           <ul>
             <li>Home</li>
             <li>Events</li>
@@ -29,7 +32,7 @@
         </nav>
         <div class="banner">
             <div class="main">
-                <h2>A better life for children</h2>
+                <h2>A Better Life For Children</h2>
                 <p>We transform lives by providing what is out of reach for the less fortunate and orphans like education, medication, access to food and clean water plus a healthy and safe environment for the children.</p>
                 <div class="buttons">
                     <button>Donate</button>
@@ -68,6 +71,112 @@
                 <button>About Us</button>
         </div>
       </div>
+      <section class="causes">
+        <h2>Popular Causes</h2>
+        <p class="cause">support in Connecticut, serving all and providing hope. Mental health counseling. Help us provide shelter. </p>
+        <section class="splide" aria-label="Splide Basic HTML Example">
+          <div class="splide__track">
+            <ul class="splide__list">
+
+              <li class="splide__slide card">
+                <img src="images/im2.jpg" alt="">
+                <h4>Housing as much kids as possible</h4>
+                <p>support in Connecticut, serving all and providing hope. Mental health counseling. Help us provide shelter. </p>
+                <button>read more</button>
+              </li>
+
+              <li class="splide__slide card">
+                <img src="images/im2.jpg" alt="">
+                <h4>Housing as much kids as possible</h4>
+                <p>support in Connecticut, serving all and providing hope. Mental health counseling. Help us provide shelter. </p>
+                <button>read more</button>
+              </li>
+
+              <li class="splide__slide card">
+                <img src="images/im2.jpg" alt="">
+                <h4>Housing as much kids as possible</h4>
+                <p>support in Connecticut, serving all and providing hope. Mental health counseling. Help us provide shelter. </p>
+                <button>read more</button>
+              </li>
+
+              <li class="splide__slide card">
+                <img src="images/im2.jpg" alt="">
+                <h4>Housing as much kids as possible</h4>
+                <p>support in Connecticut, serving all and providing hope. Mental health counseling. Help us provide shelter. </p>
+                <button>read more</button>
+              </li>
+
+              <li class="splide__slide card">
+                <img src="images/im2.jpg" alt="">
+                <h4>Housing as much kids as possible</h4>
+                <p>support in Connecticut, serving all and providing hope. Mental health counseling. Help us provide shelter. </p>
+                <button>read more</button>
+              </li>
+              
+            </ul>
+          </div>
+        </section>
+      </section>
+
+      <section class="metrics">
+        <div class="c">
+          <h4>80+</h4>
+          <p>non staff volunteers</p>
+        </div>
+        <div class="c">
+          <h4>1k</h4>
+          <p>orphans helped</p>
+        </div>
+        <div class="c">
+          <h4>50+</h4>
+          <p>businesses set up</p>
+        </div>
+        <div class="c">
+          <h4>40+</h4>
+          <p>staff members</p>
+        </div>
+      </section>
+      <section class="ss2">
+        <div class="card">
+          <h3>SUCCESS STORIES</h3>
+          <p>We transform lives by providing what is out of reach for the less fortunate and orphans like education, medication, access to food and clean water </p>
+          <p class="green"><b>450%</b> improvement</p>
+          <button>Donate Now</button>
+        </div>
+        <div class="ssimg">
+          <div class="img1">
+            <img src="images/im1.jpg" alt="">
+            <img src="images/im2.jpg" alt="">
+          </div>
+          <div class="img2">
+            <img src="images/im1.jpg" alt="">
+            <img src="images/im2.jpg" alt="">
+            <button>view more</button>
+          </div>
+        </div>
+      </section>
+      <section class="profile">
+        <img src="images/profile.jpg" alt="">
+        <div class="cwl">
+          <div class="inf">
+            
+          </div>
+          <div class="sects">
+
+          </div>
+        </div>
+      </section>
     </div>
   </body>
+  <script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+      var splide = new Splide( '.splide', {
+  perPage: 4,
+  focus  : 0,
+  omitEnd: true,
+} );
+
+splide.mount();
+    } );
+  </script>
 </html>
