@@ -96,10 +96,10 @@
             <a href="index.html"><li>Home</li></a>
             <a href="projects.html"><li>Projects</li></a>
             <a href="stories.html"><li>Our Stories</li></a>
-            <a href=""><li>About Us</li></a>
+            <a href="gallery.html"><li>Gallery</li></a>
             <a href="#" class="live"><li>Contact</li></a>
             <div class="buttons l">
-              <button>Volunteer</button>
+              <button onclick="window.location.href='contact.html'">Volunteer</button>
               <button>Donate</button>
             </div>
           </ul>
@@ -142,7 +142,7 @@
             </g>
           </svg>
           <div class="buttons">
-            <button>Volunteer</button>
+            <button onclick="window.location.href='contact.html'">Volunteer</button>
             <button>Donate</button>
           </div>
         </nav>
@@ -307,13 +307,13 @@
         <div class="contact-sect">
             <div class="info">
                 <h2>Get In Touch With Us</h2>
-                <p>We're here to help you bring the best of African coffee to the world. Contact us to explore sourcing, custom roasting, and sustainable coffee solutions.</p>
+                <p>We transform lives by providing what is out of reach for the less fortunate and orphans like education, medication, access to food and clean water plus a healthy and safe environment </p>
                 <ul>
                     <a style="text-decoration: none; font-weight: bold;" target="_blank" href="https://www.google.com/maps/place/11125+W+Pond+Ct,+Aubrey,+TX+76227,+USA">
-                        <li>11125 Pond View Ct, Aubrey Texas 76227</li>
+                        <li>Charity Building, Kampala road, Kampala</li>
                     </a>
-                    <li>+1-682-554-6526 / +1-469-839-0321 <br>+256-772-431935</li>
-                    <li><a style="text-decoration: none; color: black;" href="mailto:ram@ramchampionstexas.com">ram@ramchampionstexas.com</a></li>
+                    <li>+256-752-554-626 / +256-769-839-032</li>
+                    <li><a style="text-decoration: none; color: black;" href="mailto:info@hayatucharity.com">info@hayatucharity.com</a></li>
                 </ul>
             </div>
             <form action="" id="contact-form">
@@ -341,7 +341,7 @@
             <a href="index.html"><li>Home</li></a>
             <a href="projects.html"><li>Projects</li></a>
             <a href="stories.html"><li>Our Stories</li></a>
-            <a href="#"><li>About Us</li></a>
+            <a href="gallery.html"><li>Gallery</li></a>
             <a href="#"><li>Contact</li></a>
           </ul>
           <button>DONATE</button>
@@ -369,7 +369,7 @@
       </footer>
       <div class="copyright">
         <p>@copyright all rights reserved hayatucharity.com</p>
-        <p>powered by <span class="blue">SCEC Technologies</span></p>
+        <p>powered by <span class="blue" >SCEC Technologies</span></p>
       </div>
     </div>
     <script src="js/jquery.min.js"></script>
@@ -377,6 +377,9 @@
       $('#menul').click(function () {
         $('.container').toggleClass('active');
         $('#menuk').slideToggle();
+      });
+      $('.blue').click(function(){
+        window.open('https://www.scec-technologies.com', 'name'); 
       });
     </script>
   </body>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hayatu Charity Foundation</title>
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Jomhuria&family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style2.css">
+  </head>
+  <body>
+    <style>
+        header{
+            height: 80px;
+            background: none !important;
+            nav{
+                height: 100%;
+                ul{
+                    a{
+                    color: black;
+                    font-weight: normal;
+                    text-decoration: none;
+                }
+                }
+                svg{
+                path{
+                        stroke: black !important;
+                }
+            }
+            }
+        }
+        .ss{
+            flex-direction: row-reverse;
+            .img{
+              img{
+                width: 100%;
+              }
+                width: 40%;
+            }
+            .info{
+                width: 33%;
+            }
+        }
+        section.causes{
+           padding-inline: 0;
+           margin-inline:0 ;
+           width: 90%;
+            h2,p.cause{
+                margin-inline: 0;
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+.gallery {
+  display: grid;
+  width: 80%;
+  grid-template-columns: repeat(4, 0.5fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery-image {
+  width: 100%;
+  aspect-ratio: 2/1.2;
+  object-fit: cover;
+  object-position: center;
+  height: auto;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+.modal-content {
+  min-width: 40%;
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: cover;
+  object-position: center;
+  margin: auto;
+}
+
+.caption-container {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+button.ctrl {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button.ctrl:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.close {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  right: 25px;
+}
+
+.close:hover {
+  color: #f44336;
+}
+
+    </style>
+    <div class="root">
+      <header>
+        <nav class="container">
+          <div class="logo"><img src="images/hayatu2.svg" alt="" /></div>
+          <ul id="menuk">
+            <a href="index.html"><li>Home</li></a>
+            <a href="projects.html"><li>Projects</li></a>
+            <a href="stories.html"><li>Our Stories</li></a>
+            <a href="#" class="live"><li>Gallery</li></a>
+            <a href="contact.html"><li>Contact</li></a>
+            <div class="buttons l">
+              <button onclick="window.location.href='contact.html'">Volunteer</button>
+              <button>Donate</button>
+            </div>
+          </ul>
+          <svg id="menul" xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 200 200">
+            <g stroke-width="6.5" stroke-linecap="round">
+              <path
+                d="M72 82.286h28.75"
+                fill="#009100"
+                fill-rule="evenodd"
+                stroke="#fff"
+              />
+              <path
+                d="M100.75 103.714l72.482-.143c.043 39.398-32.284 71.434-72.16 71.434-39.878 0-72.204-32.036-72.204-71.554"
+                fill="none"
+                stroke="#fff"
+              />
+              <path
+                d="M72 125.143h28.75"
+                fill="#009100"
+                fill-rule="evenodd"
+                stroke="#fff"
+              />
+              <path
+                d="M100.75 103.714l-71.908-.143c.026-39.638 32.352-71.674 72.23-71.674 39.876 0 72.203 32.036 72.203 71.554"
+                fill="none"
+                stroke="#fff"
+              />
+              <path
+                d="M100.75 82.286h28.75"
+                fill="#009100"
+                fill-rule="evenodd"
+                stroke="#fff"
+              />
+              <path
+                d="M100.75 125.143h28.75"
+                fill="#009100"
+                fill-rule="evenodd"
+                stroke="#fff"
+              />
+            </g>
+          </svg>
+          <div class="buttons">
+            <button onclick="window.location.href='contact.html'">Volunteer</button>
+            <button>Donate</button>
+          </div>
+        </nav>
+      </header>
+      <div class="gallery">
+        <img src="images/hyt/photo_1_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
+        <img src="images/hyt/photo_2_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
+        <img src="images/hyt/photo_3_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
+        <img src="images/hyt/photo_4_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
+        <img src="images/hyt/photo_5_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
+        <img src="images/hyt/photo_6_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
+        <img src="images/hyt/photo_7_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
+        <img src="images/hyt/photo_8_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
+        <img src="images/hyt/photo_9_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
+        <img src="images/hyt/photo_10_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
+        <img src="images/hyt/photo_11_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
+        <img src="images/hyt/photo_12_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
+        <img src="images/hyt/photo_13_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
+        <img src="images/hyt/photo_14_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
+        <img src="images/hyt/photo_15_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
+        <img src="images/hyt/photo_16_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
+    </div>
+    <div id="modal" class="modal">
+        <span class="close" id="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div class="caption-container">
+          <button  class="prev ctrl" id="prev">&#10094;</button>
+          <button class="next ctrl" id="next">&#10095;</button>
+        </div>
+      </div>
+      <footer>
+        <nav>
+          <div class="logo">
+            <img src="images/hayatu.svg" alt="" />
+          </div>
+          <ul>
+            <a href="index.html"><li>Home</li></a>
+            <a href="projects.html"><li>Projects</li></a>
+            <a href="stories.html"><li>Our Stories</li></a>
+            <a href="#"><li>Gallery</li></a>
+            <a href="contact.html"><li>Contact</li></a>
+          </ul>
+          <button>DONATE</button>
+        </nav>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+          iste, velit a praesentium nemo, reprehenderit dolorum quis rem commodi
+          odit dolores explicabo, assumenda voluptate reiciendis sequi? Impedit
+          laboriosam error blanditiis.
+        </p>
+        <div class="socials">
+          <a href="https://www.instagram.com" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com" target="_blank">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank">
+            <i class="fab fa-twitter-square"></i>
+          </a>
+          <a href="https://www.facebook.com" target="_blank">
+            <i class="fa-brands fa-square-facebook"></i>
+          </a>
+        </div>
+      </footer>
+      <div class="copyright">
+        <p>@copyright all rights reserved hayatucharity.com</p>
+        <p>powered by <span class="blue">SCEC Technologies</span></p>
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script>
+      $('#menul').click(function () {
+        $('.container').toggleClass('active');
+        $('#menuk').slideToggle();
+      });
+      $(document).ready(function() {
+  let currentIndex = 0;
+  const galleryImages = $(".gallery-image");
+  const modal = $("#modal");
+  const modalImg = $("#modal-img");
+  const closeBtn = $("#close");
+  const prevBtn = $("#prev");
+  const nextBtn = $("#next");
+
+  // Open the modal when an image is clicked
+  galleryImages.on("click", function() {
+    currentIndex = galleryImages.index(this);
+    modal.show();
+    modalImg.attr("src", $(this).attr("src"));
+  });
+
+  // Close the modal when the "x" button is clicked
+  closeBtn.on("click", function() {
+    modal.hide();
+  });
+
+  // Navigate to the next image
+  nextBtn.on("click", function() {
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+    modalImg.attr("src", $(galleryImages[currentIndex]).attr("src"));
+  });
+
+  // Navigate to the previous image
+  prevBtn.on("click", function() {
+    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    modalImg.attr("src", $(galleryImages[currentIndex]).attr("src"));
+  });
+
+  // Close the modal if the user clicks outside the image
+  $(window).on("click", function(event) {
+    if ($(event.target).is(modal)) {
+      modal.hide();
+    }
+  });
+});
+
+    </script>
+  </body>
+</html>
