@@ -16,13 +16,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="style2.css">
   </head>
   <body>
     <div class="root">
       <header>
         <img class="bg" src="images/bg.jpg" alt="" />
-        <nav class="container">
+        <nav class="container" style="background: rgba(48, 51, 54, 0.099);">
           <div class="logo"><img src="images/hayatu.svg" alt="" /></div>
           <ul id="menuk">
             <a href="#" class="live"><li>Home</li></a>
@@ -97,10 +96,10 @@
             <a href="https://www.instagram.com" target="_blank">
               <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://www.tiktok.com" target="_blank">
+            <a href="https://www.tiktok.com/@bulafuibraheemfoundation" target="_blank">
               <i class="fa-brands fa-tiktok"></i>
             </a>
-            <a href="https://www.twitter.com" target="_blank">
+            <a href="https://x.com/CharityHay26521" target="_blank">
               <i class="fab fa-twitter-square"></i>
             </a>
             <a href="https://www.facebook.com" target="_blank">
@@ -116,16 +115,7 @@
       </div>
       <div class="ss">
         <div class="img">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/bUi9ewaYLUs?si=MzX5BzIU9DRqQuAP"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
+          <video src="images/hyt.mp4" controls></video>
         </div>
         <div class="info">
           <h3>Hayatu Charity Foundation</h3>
@@ -204,6 +194,7 @@
             <button>Support</button>
           </li>
         </section>
+        <button class="projects_all" onclick="window.location.href='projects.html'">View All</button>
       </section>
 
       <section class="metrics">
@@ -353,11 +344,5 @@
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/script.js"></script>
-    <script>
-      $('#menul').click(function () {
-        $('.container').toggleClass('active');
-        $('#menuk').slideToggle();
-      });
-    </script>
   </body>
 </html>

@@ -16,7 +16,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="style2.css">
   </head>
   <body>
     <style>
@@ -82,11 +81,11 @@
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
-  padding-top: 100px;
+  z-index: 5;
   left: 0;
   top: 0;
   width: 100%;
+  justify-content: center;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   text-align: center;
@@ -96,6 +95,11 @@
   min-width: 40%;
   max-width: 80%;
   max-height: 80%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   object-fit: cover;
   object-position: center;
   margin: auto;
@@ -137,7 +141,13 @@ button.ctrl:hover {
 .close:hover {
   color: #f44336;
 }
-
+@media (max-width:600px) {
+    .gallery {
+  width: 90%;
+  grid-template-columns: repeat(2, 0.5fr);
+  gap: 10px;
+}
+        }
     </style>
     <div class="root">
       <header>
@@ -198,6 +208,9 @@ button.ctrl:hover {
           </div>
         </nav>
       </header>
+      <section class="adv">
+        <p>A small donation can be a life changing moment for someone Donate to change someones life</p>
+      </section>
       <div class="gallery">
         <img src="images/hyt/photo_1_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
         <img src="images/hyt/photo_2_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
@@ -248,10 +261,10 @@ button.ctrl:hover {
           <a href="https://www.instagram.com" target="_blank">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://www.tiktok.com" target="_blank">
+          <a href="https://www.tiktok.com/@bulafuibraheemfoundation" target="_blank">
             <i class="fa-brands fa-tiktok"></i>
           </a>
-          <a href="https://www.twitter.com" target="_blank">
+          <a href="https://x.com/CharityHay26521" target="_blank">
             <i class="fab fa-twitter-square"></i>
           </a>
           <a href="https://www.facebook.com" target="_blank">
@@ -265,52 +278,6 @@ button.ctrl:hover {
       </div>
     </div>
     <script src="js/jquery.min.js"></script>
-    <script>
-      $('#menul').click(function () {
-        $('.container').toggleClass('active');
-        $('#menuk').slideToggle();
-      });
-      $(document).ready(function() {
-  let currentIndex = 0;
-  const galleryImages = $(".gallery-image");
-  const modal = $("#modal");
-  const modalImg = $("#modal-img");
-  const closeBtn = $("#close");
-  const prevBtn = $("#prev");
-  const nextBtn = $("#next");
-
-  // Open the modal when an image is clicked
-  galleryImages.on("click", function() {
-    currentIndex = galleryImages.index(this);
-    modal.show();
-    modalImg.attr("src", $(this).attr("src"));
-  });
-
-  // Close the modal when the "x" button is clicked
-  closeBtn.on("click", function() {
-    modal.hide();
-  });
-
-  // Navigate to the next image
-  nextBtn.on("click", function() {
-    currentIndex = (currentIndex + 1) % galleryImages.length;
-    modalImg.attr("src", $(galleryImages[currentIndex]).attr("src"));
-  });
-
-  // Navigate to the previous image
-  prevBtn.on("click", function() {
-    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-    modalImg.attr("src", $(galleryImages[currentIndex]).attr("src"));
-  });
-
-  // Close the modal if the user clicks outside the image
-  $(window).on("click", function(event) {
-    if ($(event.target).is(modal)) {
-      modal.hide();
-    }
-  });
-});
-
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
