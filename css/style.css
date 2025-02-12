@@ -58,7 +58,6 @@ header {
         justify-content: space-between;
         background-color: rgba(143, 153, 165, 0.099);
         backdrop-filter: blur(5px);
-
         ul {
             list-style-type: none;
             display: flex;
@@ -73,10 +72,14 @@ header {
                 font-family: Arial, Helvetica, sans-serif;
                 color: white;
                 text-decoration: none;
+                padding-block: 5px;
             }
             li{
                 cursor: pointer;
             }
+        }
+        a.live{
+            border-bottom: #CD004A 4px solid ;
         }
 
         .buttons {
@@ -350,14 +353,14 @@ header {
             margin: 0;
         }
         h4{
-            font-size: 2.2rem;
+            font-size: 2.1rem;
             font-weight: 400;
             color: #FFA800;
 
         }
         p{
-            font-size: 25px;
-            font-family: "Jomhuria", serif;
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
             color: white;
             font-weight: 400;
         }
@@ -458,7 +461,7 @@ header {
             height: fit-content;
             h3{
                 font-family: "Jomhuria", serif;
-            font-size: 2.3rem;
+            font-size: 3rem;
             font-weight: 400;
             margin: 0;
             height: fit-content;
@@ -485,7 +488,7 @@ header {
                 width: 25%;
                 h4{
                     font-family: "Jomhuria", serif;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 400;
             margin: 0;
             height: fit-content;
@@ -531,6 +534,7 @@ header {
         margin-top: -3%;
         width: 30%;
         aspect-ratio: 0.9;
+        border: 1px solid #2721164d;
         object-fit: cover;
     }
   }
@@ -611,7 +615,7 @@ header {
         width: 80%;
         .logo{
             img{
-                width: 100px;
+                width: 200px;
             }
         }
         display: flex;
@@ -624,7 +628,8 @@ header {
             font-size: 13px;
             gap: 2%;
             a{
-                
+                color: white;
+                text-decoration: none;
             }
             li{
                
@@ -699,6 +704,16 @@ header {
 
     }
   }
+  @media (min-width:601px) {
+    header{
+        nav{
+            ul{
+                display: flex !important;
+                flex-direction: row;
+            }
+        }
+    }
+  }
   @media (max-width:600px) {
     header{
         nav{
@@ -721,6 +736,9 @@ header {
                     color: black;
                     border-bottom: 1px solid black;
                 }
+            }
+            svg{
+                display: block;
             }
             .buttons.l{
                 display: flex;
@@ -757,6 +775,9 @@ header {
                 
             }
         }
+    }
+    #menuk{
+        display: none;
     }
     .ss{
         flex-direction: column;
@@ -807,12 +828,20 @@ header {
 
     }
     section.profile{
-        flex-direction: column-reverse;
+        margin-block-start: 20px;
+        flex-direction: column;
         img{
             width: 50%;
             margin-top: -5px;
         }
         .cwl{
+            .sects{
+                flex-wrap: wrap;
+                gap: 20px;
+                .card{
+                    width: 85%;
+                }
+            }
             .inf{
                 flex-direction: column;
                 h3,p{

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hayatu Charity Foundation</title>
-    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/hayatu.svg" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -20,11 +20,13 @@
   </head>
   <body>
     <style>
+      
         header{
             height: 80px;
-            background: none !important;
+            background: white !important;
             nav{
                 height: 100%;
+                background-color: white;
                 ul{
                     a{
                     color: black;
@@ -34,7 +36,7 @@
                 }
                 svg{
                 path{
-                        stroke: black !important;
+                        stroke: black;
                 }
             }
             }
@@ -42,10 +44,7 @@
         .ss{
             flex-direction: row-reverse;
             .img{
-              img{
-                width: 100%;
-              }
-                width: 40%;
+                width: 45%;
             }
             .info{
                 width: 33%;
@@ -61,6 +60,54 @@
                 width: 100%;
             }
         }
+        section.blog{
+            width: 80%;
+            .blog1{
+              margin-block-start: 50px;
+            }
+            h2.head{
+                color: #CD004A;
+                width: 70%;
+            }
+            img.head{
+                aspect-ratio: 2/1;
+                object-fit: cover;
+                object-position: center;
+                width: 70%;
+            }
+            p{
+                width: 80%;
+                font-size: 17px;
+            }
+        }
+        .head.grid{
+          display: flex;
+          align-self: center;
+          flex-wrap: wrap;
+          align-items: center;
+
+          width: 80%;
+          gap: 10px;
+          img{
+            width: 30%;
+            aspect-ratio: 2/1;
+            object-fit: cover;
+            object-position: center;
+
+          }
+
+        }
+        section.adv{
+            text-align: center;
+            display: flex;
+            color: white;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            width: 100%;
+            background-color: #CD004A;
+            height: 50px;
+        }
     </style>
     <div class="root">
       <header>
@@ -68,8 +115,8 @@
           <div class="logo"><img src="images/hayatu2.svg" alt="" /></div>
           <ul id="menuk">
             <a href="index.html"><li>Home</li></a>
-            <a href="#" class="live"><li>Projects</li></a>
-            <a href="stories.html"><li>Our Stories</li></a>
+            <a href="projects.html"><li>Projects</li></a>
+            <a href="#" class="live"><li>Our Stories</li></a>
             <a href=""><li>About Us</li></a>
             <a href="contact.html"><li>Contact</li></a>
             <div class="buttons l">
@@ -121,88 +168,53 @@
           </div>
         </nav>
       </header>
-      <div class="ss">
-        <div class="img">
-          <img src="images/bg.jpg" alt="">
-        </div>
-        <div class="info">
-          <h3>Hayatu Charity Foundation</h3>
-          <p>
-            So far we have contributed and done charity for four families,
-            giving them and the children hope We have provided guiding and
-            counseling to these family
-          </p>
-          <button>About Us</button>
-        </div>
-      </div>
-      <section class="causes">
-        <h2>OUR PROJECTS</h2>
-        <p class="cause">
-          support in Connecticut, serving all and providing hope. Mental health
-          counseling. Help us provide shelter.
-        </p>
-        <section class="cause">
-          <li class="card">
-            <img src="images/ramathan.jpg" alt="" />
-            <h4>Housing as much kids as possible</h4>
-            <p>
-              support in Connecticut, serving all and providing hope. Mental
-              health counseling. Help us provide shelter.
-            </p>
-            <button>Support</button>
-          </li>
-
-          <li class="card">
-            <img src="images/im2.jpg" alt="" />
-            <h4>Housing as much kids as possible</h4>
-            <p>
-              support in Connecticut, serving all and providing hope. Mental
-              health counseling. Help us provide shelter.
-            </p>
-            <button>Support</button>
-          </li>
-
-          <li class="card">
-            <img src="images/im2.jpg" alt="" />
-            <h4>Housing as much kids as possible</h4>
-            <p>
-              support in Connecticut, serving all and providing hope. Mental
-              health counseling. Help us provide shelter.
-            </p>
-            <button>Support</button>
-          </li>
-
-          <li class="card">
-            <img src="images/im2.jpg" alt="" />
-            <h4>Housing as much kids as possible</h4>
-            <p>
-              support in Connecticut, serving all and providing hope. Mental
-              health counseling. Help us provide shelter.
-            </p>
-            <button>Support</button>
-          </li>
-
-          <li class="card">
-            <img src="images/im2.jpg" alt="" />
-            <h4>Housing as much kids as possible</h4>
-            <p>
-              support in Connecticut, serving all and providing hope. Mental
-              health counseling. Help us provide shelter.
-            </p>
-            <button>Support</button>
-          </li>
-
-          <li class="card">
-            <img src="images/im2.jpg" alt="" />
-            <h4>Housing as much kids as possible</h4>
-            <p>
-              support in Connecticut, serving all and providing hope. Mental
-              health counseling. Help us provide shelter.
-            </p>
-            <button>Support</button>
-          </li>
-        </section>
+      <section class="adv">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, assumenda quis est sunt exercitationem dignissimos reiciendis et excepturi corrupti num</p>
       </section>
+      <section class="blog">
+
+        <div class="blog1">
+            <h2 class="head">Fed and brought relief for the children of walakira children’s relief camp </h2>
+            <img src="images/blog1.jpg" alt="" class="head">
+            <p>Lorem ipsum dolor, <br><br>sit amet consectetur adipisicing elit. Consequuntur facere tempora facilis ratione
+               eaque non, illo praesentium autem eligendi odit velit similique hic, corrupti iste quos ab magnam blanditiis! Beatae.<br>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit <br><br> Numquam quas repellat deserunt iste ratione, sequi est libero, 
+              exercitationem ab itaque, cum aspernatur rem. Hic dolore maxime iure, blanditiis distinctio laboriosam.<br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sapiente beatae quo incidunt voluptates assumenda pariatur. 
+            Saepe autem modi, quod maiores quasi sint doloremque iure expedita mollitia hic architecto in?</p>
+            <div class="head grid">
+              <img src="images/blog1.jpg" alt="">
+              <img src="images/blog1.jpg" alt="">
+              <img src="images/blog1.jpg" alt="">
+              <img src="images/blog1.jpg" alt="">
+              <img src="images/blog1.jpg" alt="">
+              <img src="images/blog1.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="blog1">
+          <h2 class="head">Fed and brought relief for the children of walakira children’s relief camp </h2>
+          <img src="images/blog1.jpg" alt="" class="head">
+          <p>Lorem ipsum dolor, <br><br>sit amet consectetur adipisicing elit. Consequuntur facere tempora facilis ratione
+             eaque non, illo praesentium autem eligendi odit velit similique hic, corrupti iste quos ab magnam blanditiis! Beatae.<br>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br><br>Numquam quas repellat deserunt iste ratione, sequi est libero, 
+            exercitationem ab itaque, cum aspernatur rem. Hic dolore maxime iure, blanditiis distinctio laboriosam.<br><br>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sapiente beatae quo incidunt voluptates assumenda pariatur. 
+          Saepe autem modi, quod maiores quasi sint doloremque iure expedita mollitia hic architecto in?</p>
+          <div class="head grid">
+            <img src="images/blog1.jpg" alt="">
+            <img src="images/blog1.jpg" alt="">
+            <img src="images/blog1.jpg" alt="">
+            <img src="images/blog1.jpg" alt="">
+            <img src="images/blog1.jpg" alt="">
+            <img src="images/blog1.jpg" alt="">
+          </div>
+      </div>
+
+      </section>
+
+
+
 
       <section class="b4footer">
         <h2>
@@ -231,8 +243,8 @@
           </div>
           <ul>
             <a href="index.html"><li>Home</li></a>
-            <a href="#"><li>Projects</li></a>
-            <a href="stories.html"><li>Our Stories</li></a>
+            <a href="projects.html"><li>Projects</li></a>
+            <a href="#" ><li>Our Stories</li></a>
             <a href="#"><li>About Us</li></a>
             <a href="contact.html"><li>Contact</li></a>
           </ul>
