@@ -45,3 +45,32 @@ $('#menul').click(function () {
       }
     });
   });
+  $(document).ready(function () {
+    // Function to animate the counter
+    function animateCounter($this) {
+      var target = $this.data('target');
+      var current = 0;
+      var duration = 2000; // Animation duration in ms
+  
+      var increment = target / (duration / 50); // Calculate how much to increment every 50ms
+  
+      function updateNumber() {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(interval);
+        }
+        $this.text(Math.floor(current) + '+');
+      }
+  
+      var interval = setInterval(updateNumber, 50);
+    }
+  
+    // Waypoints to trigger when elements come into view
+    $('.counter').waypoint(function (direction) {
+      if (direction === 'down') {
+        animateCounter($(this.element)); // Animate the counter when it comes into view
+      }
+    }, { offset: '100%' }); // Trigger animation when 75% of the element is in the viewport
+  });
+  

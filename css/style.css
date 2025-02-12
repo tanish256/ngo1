@@ -757,8 +757,10 @@ header {
         }
       }
     header{
+        height: fit-content;
         nav{
             z-index: 2;
+            height: 80px;
             ul{
                 flex-direction: column;
                 justify-content: center !important;
@@ -799,6 +801,10 @@ header {
                 width: 100%;
                 transform: unset;
                 margin-top: 20px;
+                margin-bottom: 50px;
+                h2{
+                    font-size: 2.5rem;
+                }
             }
             .socials{
                 height: fit-content;
@@ -857,6 +863,8 @@ header {
     }
     
     section.metrics{
+        height: fit-content;
+        padding-block: 10px;
         .c{
             flex-wrap: wrap;
             width: 45%;
