@@ -866,6 +866,7 @@ header {
         height: fit-content;
         padding-block: 10px;
         .c{
+            text-align: center;
             flex-wrap: wrap;
             width: 45%;
         }
