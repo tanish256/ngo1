@@ -37,7 +37,7 @@ header {
         filter: brightness(50%);
         width: 100%;
         object-fit: cover;
-        object-position: top;
+        object-position: center;
         position: absolute;
         z-index: 0;
     }
@@ -62,9 +62,9 @@ header {
         ul {
             list-style-type: none;
             display: flex;
-            gap: 10%;
+            gap: 5%;
             letter-spacing: 1px;
-            font-size: 16px;
+            font-size: 13px;
             width: 50%;
             justify-content: center;
             align-self: center;
@@ -110,7 +110,30 @@ header {
             }
         }
     }
-
+    .banner2{
+        width: 90%;
+        padding-inline: 5%;
+        height: 85%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 1;
+        h3,h2{
+            z-index: 1;
+            margin: 0;
+        }
+        h2{
+            font-size: 22px;
+            color: #f58529;
+        }
+        h3{
+            color: white;
+            font-size: 40px;
+            text-align: center;
+            width: 50%;
+        }
+    }
     .banner {
         width: 90%;
         padding-inline: 5%;
@@ -577,6 +600,7 @@ header {
         width: 100%;
         img{
             aspect-ratio: 2.5;
+            display: block;
             margin: 0;
             object-position: center;
             object-fit: cover;
