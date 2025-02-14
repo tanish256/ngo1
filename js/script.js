@@ -44,6 +44,17 @@ $('#menul').click(function () {
         modal.hide();
       }
     });
+    const video = $('#myVideo')[0];
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          $(video).get(0).play();
+        } else {
+          $(video).get(0).pause();
+        }
+      });
+    }, { threshold: 0.5 });
+    observer.observe(video);
   });
   $(document).ready(function () {
     // Function to animate the counter
