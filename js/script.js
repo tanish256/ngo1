@@ -45,16 +45,29 @@ $('#menul').click(function () {
       }
     });
     const video = $('#myVideo')[0];
-    const observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          $(video).get(0).play();
+    let userInteracted = false;
+    
+    // Play video only when the user clicks it
+    video.addEventListener('click', function () {
+      if (!userInteracted) {
+        userInteracted = true;
+        video.play();
+      }
+    });
+    
+    // Intersection Observer to control playback only if user has interacted
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting && userInteracted) {
+          video.play();
         } else {
-          $(video).get(0).pause();
+          video.pause();
         }
       });
     }, { threshold: 0.5 });
+    
     observer.observe(video);
+    
   });
   $(document).ready(function () {
     // Function to animate the counter
