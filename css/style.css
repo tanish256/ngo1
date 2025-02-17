@@ -1260,3 +1260,84 @@ section.adv{
     animation: float2 1s infinite;
     box-shadow: #01010129 1px 2px 5px;
 }
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    width: 100%;
+    justify-content: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+  }
+  
+  .modal-content {
+    min-width: 40%;
+    max-width: 80%;
+    max-height: 80%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    object-fit: cover;
+    object-position: center;
+    margin: auto;
+  }
+  
+  .caption-container {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  button.ctrl {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  button.ctrl:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .close {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    right: 25px;
+  }
+  
+  .close:hover {
+    color: #f44336;
+  }
+  #topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #00254d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    animation: float 2.5s ease-in infinite;
+    border-radius: 50%;
+    display: none;
+}
+#topBtn:hover {
+    background-color: #0d58a9;
+}
