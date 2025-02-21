@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hayatu Charity Foundation</title>
+    <link rel="shortcut icon" href="images/hayatu.svg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Jomhuria&family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <style>
+        header{
+            height: 80px;
+            background: none !important;
+            nav{
+                height: 100%;
+                ul{
+                    a{
+                    color: black;
+                    font-weight: normal;
+                    text-decoration: none;
+                }
+                }
+                svg{
+                path{
+                        stroke: black !important;
+                }
+            }
+            }
+        }
+        .sidebar{
+            background-color: #9197B3;
+            width: 30%;
+            height: 90vh;
+            color: white;
+            justify-content: left;
+            align-self: flex-start;
+        }
+        .sidebar nav ul a{
+          width: 90%;
+          height: 10%;
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          color: white;
+          border-radius: 7px;
+          justify-content: center;
+          list-style-type: none;
+        }
+        .sidebar nav ul a.active{
+          background-color: white;
+          color: black;
+        }
+        .sidebar nav{
+          height: 100%;
+        }
+        .sidebar nav ul{
+          list-style-type: none;
+          gap: 20px;
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+        }
+        section.cause{
+          .card{
+            width: 20% !important;
+            p{
+              display: none;
+            }
+          }
+        }
+
+</style>
+    <div class="root">
+      <header>
+        <nav class="container">
+          <div class="logo"><img src="../images/hayatu2.svg" alt="" /></div>
+          <ul id="menuk">
+            <a href="../index.html"><li>Home</li></a>
+            <a href="../projects.html"><li>Projects</li></a>
+            <a href="../stories.html"><li>Our Stories</li></a>
+            <a href="../gallery.html"><li>Gallery</li></a>
+            <a href="../about.html"><li>About Us</li></a>
+            <a href="../contact.html"><li>Contact</li></a>
+            <div class="buttons l">
+              <button onclick="window.location.href='../contact.html'">Volunteer</button>
+              <button>Donate</button>
+            </div>
+          </ul>
+          <svg id="menul" xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 200 200">
+            <g stroke-width="6.5" stroke-linecap="round">
+              <path
+                d="M72 82.286h28.75"
+                fill="#009100"
+                fill-rule="evenodd"
+                stroke="#fff"
+              />
+              <path
+                d="M100.75 103.714l72.482-.143c.043 39.398-32.284 71.434-72.16 71.434-39.878 0-72.204-32.036-72.204-71.554"
+                fill="none"
+                stroke="#fff"
+              />
+              <path
+                d="M72 125.143h28.75"
+                fill="#009100"
+                fill-rule="evenodd"
+                stroke="#fff"
+              />
+              <path
+                d="M100.75 103.714l-71.908-.143c.026-39.638 32.352-71.674 72.23-71.674 39.876 0 72.203 32.036 72.203 71.554"
+                fill="none"
+                stroke="#fff"
+              />
+              <path
+                d="M100.75 82.286h28.75"
+                fill="#009100"
+                fill-rule="evenodd"
+                stroke="#fff"
+              />
+              <path
+                d="M100.75 125.143h28.75"
+                fill="#009100"
+                fill-rule="evenodd"
+                stroke="#fff"
+              />
+            </g>
+          </svg>
+          <div class="buttons">
+            <button onclick="window.location.href='../contact.html'">Volunteer</button>
+            <button>Donate</button>
+          </div>
+        </nav>
+      </header>
+      <div class="admin-main">
+        <div class="sidebar">
+            <nav>
+                <ul>
+                    <a href="index.html" ><li>gallery</li></a>
+                    <a href="#" class="active"><li>Projects</li></a>
+                    <a href="blog-d.html"><li>Blog</li></a>
+                </ul>
+            </nav>
+          </div>
+          <div class="main">
+            <button>add</button>
+            <section class="causes">
+                <section class="cause">
+                    <li class="card">
+                        <img src="../images/hyt/photo_22_2025-02-12_23-19-02.jpg" alt="" />
+                        <h4>Better Shelter for Families</h4>
+                        <p>
+                            We offer a safe and welcoming place for those without homes, providing them with comfort and support in their time of need.
+                        </p>
+                        <button>edit</button>
+                    </li>
+        
+                    <li class="card">
+                      <img src="../images/qurban.png" alt="" />
+                      <h4>Qurban</h4>
+                      <p>
+                        Through our Qurban project, we distribute fresh meat to underprivileged families, ensuring they share in the joy of the season. Your support helps provide nourishment to those in need.
+                      </p>
+                      <button>edit</button>
+                  </li>
+            
+                    <li class="card">
+                        <img src="../images/hyt/photo_21_2025-02-12_23-19-02.jpg" alt="" />
+                        <h4>Building Wells for Clean Water</h4>
+                        <p>
+                            Access to clean water is a basic human right. Help us build wells to provide safe water to communities in need.
+                        </p>
+                        <button>edit</button>
+                    </li>
+            
+                    <li class="card">
+                        <img src="../images/schola.jpg" alt="" />
+                        <h4>Hayatu Scholarship Fund</h4>
+                        <p>
+                          Helping bright kids stay in school by providing scholarships for their education from primary school through to higher levels.
+                        </p>                            
+                        <button>edit</button>
+                    </li>
+            
+                    <li class="card">
+                        <img src="../images/hyt/photo_2_2025-02-12_23-19-02.jpg" alt="" />
+                        <h4>Feeding the Homeless</h4>
+                        <p>
+                            Every meal counts. We provide hot meals to those who are homeless and struggling to make ends meet.
+                        </p>
+                        <button>edit</button>
+                    </li>
+            
+                    <li class="card">
+                        <img src="../images/hyt/photo_42_2025-02-12_23-19-02.jpg" alt="" />
+                        <h4>Providing Relief to Orphanages</h4>
+                        <p>
+                            Help us bring joy and comfort to orphaned children by providing essentials, education, and love to those in need.
+                        </p>
+                        <button>edit</button>
+                    </li>
+            
+                    <li class="card">
+                        <img src="../images/hyt/photo_18_2025-02-12_23-19-02.jpg" alt="" />
+                        <h4>Visiting the Sick</h4>
+                        <p>
+                            We bring smiles and emotional support to those in hospitals, spreading kindness and warmth to those fighting illness.
+                        </p>
+                        <button>edit</button>
+                    </li>
+                </section>
+            </section>
+          </div>
+      </div>
+      <footer>
+        <nav>
+          <div class="logo">
+            <img src="../images/hayatu.svg" alt="" />
+          </div>
+          <ul>
+            <a href="index.html"><li>Home</li></a>
+            <a href="projects.html"><li>Projects</li></a>
+            <a href="stories.html"><li>Our Stories</li></a>
+            <a href="#"><li>Gallery</li></a>
+            <a href="about.html"><li>About Us</li></a>
+            <a href="contact.html"><li>Contact</li></a>
+          </ul>
+          <button>DONATE</button>
+        </nav>
+        <p>
+          Join us in making a lasting difference. At Hayatu Charity Foundation, 
+            we're committed to changing lives by supporting education, providing shelter, 
+            and empowering communities. Every contribution counts towards building a brighter future.
+        </p>
+        <div class="socials">
+          <a href="https://www.instagram.com/hayatu_charity_foundation?igsh=OWJmeW0zZTJ3aTM4" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/@hayatucharityfoundation?_t=ZM-8tzel3iLb42&_r=1" target="_blank">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+          <a href="https://x.com/CharityHay26521" target="_blank">
+            <i class="fab fa-twitter-square"></i>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61566345901391" target="_blank">
+            <i class="fa-brands fa-square-facebook"></i>
+          </a>
+        </div>
+      </footer>
+      <div class="copyright">
+        <p>@copyright all rights reserved hayatucharity.com</p>
+        <p>powered by <span class="blue">SCEC Technologies</span></p>
+      </div>
+    </div>
+    <button id="topBtn" onclick="scrollToTop()">&uarr;</button>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

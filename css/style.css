@@ -1341,3 +1341,21 @@ section.adv{
 #topBtn:hover {
     background-color: #0d58a9;
 }
+.admin-main{
+    display: flex;
+    width: 100%;
+    overflow-y: hidden;
+    height: 90vh;
+    .main{
+        overflow-y: scroll;
+      width: 70%;
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      button:first-child{
+        margin-top: 10px;
+        align-self: flex-start;
+        margin-left: 10px;
+      }
+    }
+  }
