@@ -63,7 +63,7 @@
 
 .gallery {
   display: grid;
-  width: 80%;
+  width: 90%;
   grid-template-columns: repeat(4, 0.5fr);
   gap: 20px;
   padding: 20px;
@@ -151,23 +151,9 @@
         <p>A small donation can be a life changing moment for someone Donate to change someones life</p>
       </section>
       <div class="gallery">
-        <img src="images/hyt/photo_1_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-        <img src="images/hyt/photo_2_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-        <img src="images/hyt/photo_3_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-        <img src="images/hyt/photo_4_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-        <img src="images/hyt/photo_5_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-        <img src="images/hyt/photo_6_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-        <img src="images/hyt/photo_7_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-        <img src="images/hyt/photo_8_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-        <img src="images/hyt/photo_9_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-        <img src="images/hyt/photo_10_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-        <img src="images/hyt/photo_11_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-        <img src="images/hyt/photo_12_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-        <img src="images/hyt/photo_13_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-        <img src="images/hyt/photo_14_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-        <img src="images/hyt/photo_15_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-        <img src="images/hyt/photo_16_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
+       
     </div>
+    
     <div id="modal" class="modal">
         <span class="close" id="close">&times;</span>
         <img class="modal-content" id="modal-img">
@@ -219,5 +205,82 @@
     <button id="topBtn" onclick="scrollToTop()">&uarr;</button>
     <script src="js/jquery.min.js"></script>
     <script src="js/script.js"></script>
+
+<script>
+  const imageData = {
+    "images": [
+      "images/hyt/photo_1_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_2_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_3_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_4_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_5_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_6_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_7_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_8_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_9_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_10_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_11_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_12_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_13_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_14_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_15_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_16_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_17_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_18_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_19_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_20_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_21_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_22_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_23_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_24_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_25_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_26_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_27_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_28_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_29_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_30_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_31_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_32_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_33_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_34_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_35_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_36_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_37_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_38_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_39_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_40_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_41_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_42_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_43_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_44_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_45_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_46_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_47_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_48_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_49_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_50_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_51_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_52_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_53_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_54_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_55_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_56_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_57_2025-02-12_23-19-02.jpg",
+      "images/hyt/photo_58_2025-02-12_23-19-02.jpg"
+    ]
+  };
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const galleryDiv = document.querySelector(".gallery");
+
+    imageData.images.forEach(src => {
+      const img = document.createElement("img");
+      img.src = src;
+      img.classList.add("gallery-image");
+      galleryDiv.appendChild(img);
+    });
+  });
+</script>
+
   </body>
 </html>
