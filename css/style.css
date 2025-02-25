@@ -1325,7 +1325,7 @@ section.adv{
   }
   #topBtn {
     position: fixed;
-    bottom: 20px;
+    bottom: 20%;
     right: 20px;
     background-color: #00254d;
     color: white;
@@ -1359,3 +1359,21 @@ section.adv{
       }
     }
   }
+  .float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #9999995a;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:15px;
+}
