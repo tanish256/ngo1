@@ -9,6 +9,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -85,12 +87,12 @@
         </nav>
         <div class="banner">
           <div class="main">
-            <h2>Generosity changes lives</h2>
-            <p>
+            <h2 data-aos="fade-up" data-aos-duration="800">Your Generosity changes lives</h2>
+            <p data-aos="fade-up" data-aos-duration="800">
               Providing hope, education, healthcare, and essentials to orphans and underprivileged communities.
             </p>
             <div class="buttons">
-              <button>Donate</button>
+              <button data-aos="fade-right"data-aos-duration="1000">Donate</button>
               <a href="about.html"><button>Our Mission</button></a>
             </div>
           </div>
@@ -120,7 +122,7 @@
           <video id="myVideo" src="images/vid1.mp4" controls>Your browser does not support the video tag.</video>
         </div>
         <div class="info">
-          <h3>Hayatu Charity Foundation</h3>
+          <h3 data-aos="fade-up" data-aos-duration="1000">Hayatu Charity Foundation</h3>
           <p>
             We believe in the power of kindness. Our mission is to uplift the less fortunate by providing 
             access to education, medical care, food, providing shelter, empowering communities and a safe environment for children. So far, we've 
@@ -135,7 +137,7 @@
           We dedicate ourselves to providing housing, education, and emotional support to children in need, while also working on a variety of community projects to help those who are less fortunate.
         </p>
         <section class="cause">
-            <li class="card">
+            <li data-aos="fade-up" data-aos-duration="800" class="card">
                 <img src="images/hyt/photo_22_2025-02-12_23-19-02.jpg" alt="" />
                 <h4>Better Shelter for Families</h4>
                 <p>
@@ -144,7 +146,7 @@
                 <button>Support</button>
             </li>
     
-            <li class="card">
+            <li data-aos="fade-up" data-aos-duration="800" class="card">
                 <img src="images/hyt/photo_21_2025-02-12_23-19-02.jpg" alt="" />
                 <h4>Build a Borehole</h4>
                 <p>
@@ -153,7 +155,7 @@
                 <button>Support</button>
             </li>
     
-            <li class="card">
+            <li data-aos="fade-up" data-aos-duration="800" class="card">
                 <img src="images/schola.jpg" alt="" />
                 <h4>Hayatu Scholarship Fund</h4>
                 <p>
@@ -162,7 +164,7 @@
                 <button>Support</button>
             </li>
     
-            <li class="card">
+            <li data-aos="fade-up" data-aos-duration="800" class="card">
               <img src="images/qurban.png" alt="" />
               <h4>Qurban</h4>
               <p>
@@ -171,7 +173,7 @@
               <button>Support</button>
           </li>
     
-            <li class="card">
+            <li data-aos="fade-up" data-aos-duration="800" class="card">
                 <img src="images/hyt/photo_42_2025-02-12_23-19-02.jpg" alt="" />
                 <h4>Providing Relief to Orphanages</h4>
                 <p>
@@ -180,7 +182,7 @@
                 <button>Support</button>
             </li>
     
-            <li class="card">
+            <li data-aos="fade-up" data-aos-duration="800" class="card">
                 <img src="images/hyt/photo_18_2025-02-12_23-19-02.jpg" alt="" />
                 <h4>Visiting the Sick</h4>
                 <p>
@@ -334,5 +336,8 @@
     <script src="js/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/imakewebthings/waypoints/4.0.1/lib/jquery.waypoints.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
