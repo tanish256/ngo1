@@ -11,6 +11,9 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Inter&family=Jomhuria&family=Kaushan+Script&display=swap"
       rel="stylesheet"
@@ -219,6 +222,23 @@
           </div>
         </div>
       </div>
+      <style>
+        button svg{
+          display: block;
+        }
+      </style>
+      <div class="story_wrapper">
+        <div class="Story_Layout">
+          <form id="AddStory" class="story-form">
+            <input type="text" name="title" placeholder="Story Title" required class="form-input">
+            <input type="file" name="image" class="form-input">
+            <div id="editor"></div>
+            <input type="file" name="image" class="form-input" multiple>
+            <button type="submit" class="submit-btn">Create Post</button>
+        </form>
+        
+        </div>
+      </div>
       <footer>
         <nav>
           <div class="logo">
@@ -262,5 +282,22 @@
     <button id="topBtn" onclick="scrollToTop()">&uarr;</button>
     <script src="js/jquery.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      var quill = new Quill('#editor', {
+          theme: 'snow',
+          modules: {
+              toolbar: [
+                  [{ header: [1, 2, false] }],
+                  ['bold', 'italic', 'underline', 'strike'],
+                  [{ list: 'ordered' }, { list: 'bullet' }],
+                  ['blockquote', 'code-block'],
+                  ['link', 'image', 'video'],
+                  ['clean'] // Removes formatting
+              ]
+          }
+      });
+
+  </script>
+  
   </body>
 </html>
