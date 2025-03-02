@@ -9,6 +9,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -329,7 +331,7 @@
       </style>
       <section class="cntct">
         <img src="images/bg.jpg" alt="Ram Champions LLC Contact Page Background">
-        <div class="contact-sect">
+        <div class="contact-sect" data-aos="fade-up" data-aos-duration="800">
             <div class="info">
                 <h2>Get In Touch With Us</h2>
                 <p>We help transform lives by providing education, healthcare, food, clean water, and safe environments to those who need it most, including orphans and underserved communities.</p>
@@ -341,7 +343,7 @@
                     <li><a style="text-decoration: none; color: black;" href="mailto:hayatucharityfoundation@gmail.com">hayatucharityfoundation@gmail.com</a></li>
                 </ul>
             </div>
-            <form action="" id="contact-form">
+            <form action="" id="contact-form" data-aos="zoom-in" data-aos-duration="1000">
                 <div class="grid">
                     <label><span>Full Name</span><input type="text" name="user_name" required></label>
                     <label><span>Organization Name <span style="opacity: 0.7;">(optional)</span></span><input type="text" name="company_name"></label>
@@ -403,6 +405,8 @@
     <button id="topBtn" onclick="scrollToTop()">&uarr;</button>
     <script src="js/jquery.min.js"></script>
     <script src="js/script.js"></script>
-
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

@@ -9,6 +9,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -126,10 +128,10 @@
         <p>A small donation can be a life changing moment for someone Donate to change someones life</p>
       </section>
       <div class="ss">
-        <div class="img">
+        <div class="img" data-aos="fade-right" data-aos-duration="800">
           <img src="images/bg.jpg" alt="">
         </div>
-        <div class="info">
+        <div class="info" data-aos="fade-left" data-aos-duration="800">
           <h3>Hayatu Charity Foundation</h3>
           <p>
             We believe in the power of kindness. Our mission is to uplift the less fortunate by providing 
@@ -146,7 +148,7 @@
           We dedicate ourselves to providing housing, education, and emotional support to children in need, while also working on a variety of community projects to help those who are less fortunate.
         </p>
         <section class="cause">
-            <li class="card">
+            <li class="card" data-aos="fade-up" data-aos-duration="800">
                 <img src="images/hyt/photo_22_2025-02-12_23-19-02.jpg" alt="" />
                 <h4>Better Shelter for Families</h4>
                 <p>
@@ -155,7 +157,7 @@
                 <button>Support</button>
             </li>
 
-            <li class="card">
+            <li class="card" data-aos="fade-up" data-aos-duration="900">
               <img src="images/qurban.png" alt="" />
               <h4>Qurban</h4>
               <p>
@@ -164,7 +166,7 @@
               <button>Support</button>
           </li>
     
-            <li class="card">
+            <li class="card" data-aos="fade-up" data-aos-duration="800">
                 <img src="images/hyt/photo_21_2025-02-12_23-19-02.jpg" alt="" />
                 <h4>Boreholes</h4>
                 <p>
@@ -173,7 +175,7 @@
                 <button>Support</button>
             </li>
     
-            <li class="card">
+            <li class="card" data-aos="fade-up" data-aos-duration="900">
                 <img src="images/schola.jpg" alt="" />
                 <h4>Hayatu Scholarship Fund</h4>
                 <p>
@@ -182,7 +184,7 @@
                 <button>Support</button>
             </li>
     
-            <li class="card">
+            <li class="card" data-aos="fade-up" data-aos-duration="800">
                 <img src="images/hyt/photo_2_2025-02-12_23-19-02.jpg" alt="" />
                 <h4>Feeding the Homeless</h4>
                 <p>
@@ -191,7 +193,7 @@
                 <button>Support</button>
             </li>
     
-            <li class="card">
+            <li class="card" data-aos="fade-up" data-aos-duration="900">
                 <img src="images/hyt/photo_42_2025-02-12_23-19-02.jpg" alt="" />
                 <h4>Providing Relief to Orphanages</h4>
                 <p>
@@ -200,7 +202,7 @@
                 <button>Support</button>
             </li>
     
-            <li class="card">
+            <li class="card" data-aos="fade-up" data-aos-duration="800">
                 <img src="images/hyt/photo_18_2025-02-12_23-19-02.jpg" alt="" />
                 <h4>Visiting the Sick</h4>
                 <p>
@@ -211,7 +213,7 @@
         </section>
     </section>
 
-      <section class="b4footer">
+      <section class="b4footer" data-aos="zoom-in" data-aos-duration="800">
         <h2>
           HAYATU CHARITY FOUNDATION IS AN ORGANIZATION AIMED AT HELPING AND
           PROMOTING CHILDREN AROUND THE WORLD
@@ -277,5 +279,8 @@
     <button id="topBtn" onclick="scrollToTop()">&uarr;</button>
     <script src="js/jquery.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
