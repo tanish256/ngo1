@@ -837,7 +837,7 @@ section.b4footer2{
         }
     }
 }
-  @media (min-width:601px) {
+  @media (min-width:769px) {
     header{
         nav{
             ul{
@@ -847,7 +847,7 @@ section.b4footer2{
         }
     }
   }
-  @media (max-width:600px) {
+  @media (max-width:768px) {
     section.b4footer{
         width: 95%;
         text-align: center;
@@ -1213,7 +1213,7 @@ section.adv{
     height: 50px;
 }
 
-@media (max-width:600px) {
+@media (max-width:768px) {
   section.blog{
     width: 90%;
     .blog1{
