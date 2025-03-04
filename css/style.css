@@ -768,7 +768,6 @@ header {
                 margin: 0;
             }
             p{
-                font-size: 1.2rem;
                 margin: 0;
 
             }
@@ -781,14 +780,12 @@ header {
                 margin: 0;
             }
             p{
-                font-size: 1rem;
                 margin: 0;
 
             }
         }
         .t{
             p{
-                font-size: 1.4rem;
             }
         }
         .k{
