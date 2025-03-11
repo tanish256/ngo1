@@ -19,30 +19,6 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init({
-              publicKey: "hBCULCrZ20mp_Icau",
-            });
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // these IDs from the previous steps
-                emailjs.sendForm('service_2urdyxc', 'template_3p17wmw', this)
-                    .then(() => {
-                        console.log('SUCCESS!');
-                        alert("Message sent Successfully")
-                        location.reload();
-                    }, (error) => {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
   </head>
   <body>
     <style>
@@ -124,10 +100,10 @@
             <a href="stories.html"><li>Our Stories</li></a>
             <a href="gallery.html"><li>Gallery</li></a>
             <a href="about.html"><li>About Us</li></a>
-            <a href="#" class="live"><li>Contact</li></a>
+            <a href="contact.html"><li>Contact</li></a>
             <div class="buttons l">
               <button onclick="window.location.href='contact.html'">Volunteer</button>
-              <button onclick="donate()">Donate</button>
+              <button>Donate</button>
             </div>
           </ul>
           <svg id="menul" xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 200 200">
@@ -170,7 +146,7 @@
           </svg>
           <div class="buttons">
             <button onclick="window.location.href='contact.html'">Volunteer</button>
-            <button onclick="donate()">Donate</button>
+            <button>Donate</button>
           </div>
         </nav>
       </header>
@@ -180,100 +156,66 @@
     width: 100%;
     display: grid;
     position: relative;
-
-    img {
-        z-index: 0;
-        position: absolute;
-        height: 100%;
-        filter: brightness(0.8);
-        width: 100%;
-        object-fit: cover;
-    }
 }
 .contact-sect {
     z-index: 1;
     position: relative;
-    width: 80%;
+    width: 70%;
     justify-self: center;
     top: 0;
     gap: 5%;
     padding: 5% 5%;
     align-self: center;
     display: flex;
+    background-image: url(images/image.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     height: 65%;
     border-radius: 5px;
     justify-content: space-evenly;
     background-color: #fffcf6;
-
-    form {
-        width: 55%;
-        height: 100%;
-        align-self: center;
+    .left{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        img{
+        max-width: 48%;
+    }
+    .btransfer{
+            color: white;
+            background-color: rgb(0, 0, 20);
+            padding: 13px;
+            display: flex;
+            justify-content: center;
+            border-radius: 5px;
+            align-items: center;
+            flex-direction: column;
+            width: fit-content;
+            gap: 7px;
+            *{
+                margin: 0;
+            }
+        }
+    }
+    .right{
+        width: 50%;
+        color: white;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        border-radius: 5px;
         align-items: center;
-        padding: 20px 20px;
-
-        background-color: #355834e6;
-
-        .grid {
-            margin-bottom: 20px;
-            display: inline-grid;
-            grid-template-columns: auto auto;
-            align-items: center;
-            gap: 1.5vw;
-            width: 90%;
-            justify-content: center;
+        justify-content: center;
+        gap: 30px;
+        p{
+            font-size: 25px;
         }
-        label span{
-            color: white;
-        }
-        input {
-            border-radius: 3px;
-            border: none;
-            width: 90%;
-            justify-self: center;
-            min-height: 10%;
-            font-size: 16px;
-            padding: 15px 5%;
-        }
-
-        button {
-            border-radius: 3px;
-            border: none;
-            width: fit-content;
-            min-height: 10%;
-            color: black;
-            font-size: 18px;
-            align-self: flex-start;
-            background-color: #F8E6AC;
-            padding: 10px 25px;
-        }
-        .ta{
-            width: 90%;
-        }
-        textarea {
-            font-size: 16px;
-            resize: none;
-            border: none;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            width: 100%;
+        img{
+            width: 20%;
         }
     }
-
-    .info {
-        width: 40%;
-
-        ul {
-            display: flex;
-            gap: 10px;
-            flex-direction: column;
-            list-style-type: none;
-        }
-    }
+    
 }
 @media (max-width:768px){
     .cntct{
@@ -281,12 +223,6 @@
         height: auto;
         margin: 10px;
         flex-direction: column;
-        .info{
-            width: 100%;
-        }
-        form{
-            width: 100%;
-        }
     }
     }
     .cntct {
@@ -297,65 +233,56 @@
             flex-direction: column;
             width: 80%; /* Make it narrower to fit within smaller screens */
             padding: 5%;
+            min-height: 80vh !important;
+            .left{
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+            .right{
+                width: 100%;
+            }
         }
-    
-        .contact-sect .info, .contact-sect form {
-            width: 100%; /* Set both info and form to take full width */
-        }
-    
-        .contact-sect form {
-            padding: 10px; /* Reduce padding on form to save space */
-        }
-    
-        .contact-sect .grid {
-            grid-template-columns: 1fr !important; /* Stack form fields in a single column */
-            width: 100%; /* Ensure it fits within the contact-sect area */
-        }
-    
-        .contact-sect input, .contact-sect textarea {
-            width: 100% !important; /* Full width for input and textarea */
-        }
-        .cntct {
-        min-height: 90vh; /* Use min-height to keep responsiveness */
-        height: auto; /* Allow height to adjust */
-    }
-    
-    .contact-sect {
-        height: auto; /* Allow dynamic height based on content */
-    }
-    .contact-sect input, .contact-sect textarea {
-        width: 100%;
-        box-sizing: border-box; /* Ensure padding doesn't increase element width */
-    }
 }
       </style>
       <section class="cntct">
-        <img src="images/bg.webp" alt="Ram Champions LLC Contact Page Background">
         <div class="contact-sect" data-aos="fade-up" data-aos-duration="800">
-            <div class="info">
-                <h2>Get In Touch With Us</h2>
-                <p>We help transform lives by providing education, healthcare, food, clean water, and safe environments to those who need it most, including orphans and underserved communities.</p>
-                <ul>
-                    <a style="text-decoration: none; font-weight: bold;" target="_blank" href="https://www.google.com/maps/place/11125+W+Pond+Ct,+Aubrey,+TX+76227,+USA">
-                        <li>Charity Building, Kampala road, Kampala</li>
-                    </a>
-                    <li>+256706171731 / +256785656038</li>
-                    <li><a style="text-decoration: none; color: black;" href="mailto:hayatucharityfoundation@gmail.com">hayatucharityfoundation@gmail.com</a></li>
-                </ul>
-            </div>
-            <form action="" id="contact-form" data-aos="zoom-in" data-aos-duration="1000">
-                <div class="grid">
-                    <label><span>Full Name</span><input type="text" name="user_name" required></label>
-                    <label><span>Organization Name <span style="opacity: 0.7;">(optional)</span></span><input type="text" name="company_name"></label>
-                    <label><span>Email</span><input type="email" name="user_email" required></label>
-                    <label><span>Phone Number</span><input type="tel" name="user_tel" required></label>
+            <div class="left">
+                <img src="images/wu.jpg" alt="">
+                <img src="images/am.jpg" alt="">
+                <img src="images/mg.png" alt="">
+                <img src="images/mm.png" alt="">
+                <div class="btransfer">
+                    <h3>BANK TRANSFER</h3>
+                    <p>SWIFT CODE: <i>CERBUGKA</i></p>
+                    <p>A/C NUMBER: 3203610875</p>
                 </div>
-                <label class="ta">
-                    <span>Message</span>
-                    <textarea name="message" rows="6" cols="40" required></textarea>
-                </label>
-                <button type="submit">Send Message</button>
-            </form>
+            </div>
+            <div class="right">
+                <img src="images/flag.png" alt="">
+                <p>+256706171731 <br><br>
+                    +256785656038</p>
+                    <style>
+                        .w-img{
+                            width:50px;
+                            height:50px;
+                            background-color:#25d366;
+                            color:#FFF;
+                            text-align:center;
+                            font-size:20px;
+                            border-radius: 50%;
+                            z-index:100;
+                            display: block;
+                        }
+                    </style>
+                    <div  style="display: flex; gap: 20px; cursor: pointer; align-items: center;">
+                        <a href="https://api.whatsapp.com/send?phone=256706171731" class="w-img"  target="_blank">
+                        <i class="fa-brands fa-whatsapp my-float"></i>
+                        </a>
+                        <p onclick='window.open("https://api.whatsapp.com/send?phone=256706171731", "_blank").focus();'>+256785656038</p>
+                    </div>
+                    
+            </div>
         </div>
     </section>
 

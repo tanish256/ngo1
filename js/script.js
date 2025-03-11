@@ -110,3 +110,7 @@ $('#menul').click(function () {
   function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  function donate() {
+    window.open('donate.html', '_self').focus();
+  }
