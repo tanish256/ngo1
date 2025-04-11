@@ -477,43 +477,13 @@ header .banner .socials a:nth-child(4) i { color: #1877F2; }
   .active path:nth-child(6) {
     transform: translateX(9px) translateY(1px) rotate(45deg);
   }
-  section.blog{
-    width: 80%;
-    .blog1{
-      margin-block-start: 50px;
-    }
-    h2.head{
-        color: #CD004A;
-        width: 70%;
-    }
-    img.head{
-        aspect-ratio: 2/1;
-        object-fit: cover;
-        object-position: center;
-        width: 70%;
-    }
-    p{
-        width: 80%;
-        font-size: 17px;
-    }
-}
-.head.grid{
-  display: flex;
-  align-self: center;
-  flex-wrap: wrap;
-  align-items: center;
-
-  width: 80%;
-  gap: 10px;
-  img{
-    width: 30%;
-    aspect-ratio: 2/1;
-    object-fit: cover;
-    object-position: center;
-
-  }
-
-}
+  section.blog { width: 80%; display: flex;flex-direction: column;align-items: center; }
+  section.blog .blog1 { margin-block-start: 50px; width: 90%; }
+  section.blog h2.head { color: #CD004A; width: 100%; }
+  section.blog img.head { aspect-ratio: 2/1; object-fit: cover; object-position: center; width: 100%; }
+  section.blog p { width: 100%; font-size: 17px; }
+  .head.grid { display: flex; align-self: center; flex-wrap: wrap; align-items: center; width: 100%; gap: 10px; }
+  .head.grid img { width: 30%; aspect-ratio: 2/1; object-fit: cover; object-position: center; }
 section.adv{
     text-align: center;
     display: flex;
@@ -654,24 +624,9 @@ section.adv{
 #topBtn:hover {
     background-color: #0d58a9;
 }
-.admin-main{
-    display: flex;
-    width: 100%;
-    overflow-y: hidden;
-    height: 90vh;
-    .main{
-        overflow-y: scroll;
-      width: 70%;
-      flex-direction: column;
-      display: flex;
-      align-items: center;
-      button:first-child{
-        margin-top: 10px;
-        align-self: flex-start;
-        margin-left: 10px;
-      }
-    }
-  }
+.admin-main { display: flex; width: 100%; overflow-y: hidden; height: 90vh; }
+.admin-main .main { overflow-y: scroll; width: 70%; flex-direction: column; display: flex; align-items: center; }
+.admin-main .main button:first-child { margin-top: 10px; align-self: flex-start; margin-left: 10px; }
   .float{
 	position:fixed;
 	width:60px;

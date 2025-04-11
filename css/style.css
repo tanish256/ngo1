@@ -1163,41 +1163,39 @@ section.b4footer2{
   }
   section.blog{
     width: 80%;
-    .blog1{
-      margin-block-start: 50px;
-    }
-    h2.head{
-        color: #CD004A;
-        width: 70%;
-    }
-    img.head{
-        aspect-ratio: 2/1;
-        object-fit: cover;
-        object-position: center;
-        width: 70%;
-    }
-    p{
-        width: 80%;
-        font-size: 17px;
-    }
 }
+section.blog .blog1{
+    margin-block-start: 50px;
+  }
+  section.blog h2.head{
+      color: #CD004A;
+      width: 70%;
+  }
+  section.blog img.head{
+      aspect-ratio: 2/1;
+      object-fit: cover;
+      object-position: center;
+      width: 70%;
+  }
+  section.blog p{
+      width: 80%;
+      font-size: 17px;
+  }
 .head.grid{
   display: flex;
   align-self: center;
   flex-wrap: wrap;
   align-items: center;
-
   width: 80%;
   gap: 10px;
-  img{
+}
+.head.grid img{
     width: 30%;
     aspect-ratio: 2/1;
     object-fit: cover;
     object-position: center;
 
   }
-
-}
 section.adv{
     text-align: center;
     display: flex;

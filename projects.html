@@ -21,48 +21,16 @@
   </head>
   <body>
     <style>
-        header{
-            height: 80px;
-            background: none !important;
-            nav{
-                height: 100%;
-                ul{
-                    a{
-                    color: black;
-                    font-weight: normal;
-                    text-decoration: none;
-                }
-                }
-                svg{
-                path{
-                        stroke: black !important;
-                }
-            }
-            }
-        }
-        .ss{
-            flex-direction: row-reverse;
-            .img{
-              img{
-                width: 100%;
-              }
-                width: 40%;
-            }
-            .info{
-                width: 33%;
-            }
-        }
-        section.causes{
-           padding-inline: 0;
-           margin-inline:0 ;
-           width: 90%;
-            h2,p.cause{
-                margin-inline: 0;
-                text-align: center;
-                align-self: center;
-                width: 70%;
-            }
-        }
+header { height: 80px; background: none !important; }
+header nav { height: 100%; }
+header nav ul a { color: black; font-weight: normal; text-decoration: none; }
+header nav svg path { stroke: black !important; }
+.ss { flex-direction: row-reverse; }
+.ss .img img { width: 100%; }
+.ss .img { width: 40%; }
+.ss .info { width: 33%; }
+section.causes { padding-inline: 0; margin-inline:0 ; width: 90%; }
+section.causes h2, section.causes p.cause { margin-inline: 0; text-align: center; align-self: center; width: 70%; }
     </style>
     <div class="root">
       <header>
