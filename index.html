@@ -168,7 +168,7 @@
     
             <li data-aos="fade-up" data-aos-duration="800" class="card">
                 <img src="images/hyt/photo_21_2025-02-12_23-19-02.jpg" alt="" class="gallery-image"/>
-                <h4>Build a Borehole</h4>
+                <h4 id="baw">Build a Borehole</h4>
                 <p>
                     Access to clean water is a basic human right. Help us build Boreholes to provide safe water to communities in need.
                 </p>
@@ -346,7 +346,7 @@
         </div>
       </footer>
       <div class="copyright">
-        <p>@copyright all rights reserved Hayatucharity.com</p>
+        <p>@copyright all rights reserved hayatucharityfoundation.com</p>
         <p>powered by <span class="blue">SCEC Technologies</span></p>
       </div>
     </div>
@@ -359,6 +359,11 @@
     <script src="js/script.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script>
+      $('#baw').click(function () {
+        window.open('projects/wells.html', '_self').focus();
+      });
     </script>
   </body>
 </html>

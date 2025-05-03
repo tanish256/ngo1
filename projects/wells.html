@@ -104,9 +104,156 @@ section.causes h2, section.causes p.cause { margin-inline: 0; text-align: center
       <section class="adv">
         <p>A small donation can be a life changing moment for someone Donate to change someones life</p>
       </section>
-
+      <style>
+        .project-root{
+          width: 90%;
+          margin-bottom: 3%;
+          display: flex;
+          flex-direction: column;
+        }
+        .project-root h2{
+          text-align: center;
+        }
+        .project-root .hero{
+          margin-block: 3%;
+          display: flex;
+          gap: 5%;
+        }
+        .project-root .hero img{
+          aspect-ratio: 2/1;
+          width: 45%;
+          object-fit: cover;
+          object-position: center;
+        }
+        .project-root .blog{
+          width: 90%;
+          align-self: center;
+        }
+        .project-root .blog p{
+          margin-block: 3%;
+        }
+        .head-pink{
+          color: #CD004A;
+          font-size: 2rem;
+          margin: 0;
+        }
+      </style>
       <section class="project-root">
-        
+      
+        <div class="hero">
+          <img src="../images/hyt/photo_21_2025-02-12_23-19-02.jpg" alt="">
+          <div class="info">
+            <h3 class="head-pink">Build A Well</h3>
+            <p>  Access to clean water is a basic human right, yet many communities still suffer 
+              without it. Through our “Build A Well” initiative, we are working to provide safe, 
+              reliable water sources to underserved villages. Your support directly funds the construction 
+              of these life-saving wells, improving health and reducing the daily burden faced by women and 
+              children who walk miles for water.</p>
+              <form action="">
+                <style>
+                  .numbers{
+                    display: flex;
+                    gap: 10px;
+                    margin-block:10px ;
+                  }
+                  .numbers .price{
+                    padding: 9px 13px;
+                    background-color: #5b8f5b;
+                    border-radius: 3px;
+                    min-width: 50px;
+                    cursor: pointer;
+                    text-align: center;
+                    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+                    color: white;
+                  }
+                  .numbers .price:hover{
+                    box-shadow: unset;
+                  }
+                  .price.active{
+                    background:#CD004A;
+                  }
+                  .cust-number{
+                    padding: 0 5px;
+                    height: 35px;
+                    width: 100px;
+                    margin-bottom: 10px;
+                    border: 2px solid rgb(26, 26, 26);
+                    border-radius: 5px;
+                  }
+                  .grid-imgs{
+                    width: 100%;
+                    gap: 20px;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows: 1fr 1fr;
+                  }
+                  .grid-imgs img{
+                    width: 100%;
+                    object-fit: cover;
+                    aspect-ratio: 2/2;
+                  }
+                  .grid-imgs video{
+                    width: 100%;
+                    object-fit: cover;
+                    aspect-ratio: 2/2;
+                  }
+                  @media (max-width:768px) {
+                    .grid-imgs{
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr 1fr 1fr;
+                  }
+                  .project-root .hero{
+                    margin-block: 3%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5%;
+                  }
+                  .project-root .hero img{
+                    align-self: center;
+                    margin-block: 2%;
+                    width: 80%;
+                  }
+                  }
+                </style>
+                <div class="numbers">
+                  <div class="price">$50</div>
+                  <div class="price">$100</div>
+                  <div class="price">$150</div>
+                </div>
+                <input class="cust-number" type="number" placeholder="CUSTOM">
+              </form>
+              <button>Support</button>
+          </div>
+        </div>
+
+        <div class="blog">
+          <h2>What We Have Done So Far</h2>
+          <p>Thanks to your generous donations, we've successfully completed multiple well installations 
+            across various communities in Uganda. Each well is a beacon of hope, offering clean water, better
+             hygiene, and a renewed sense of dignity to those it serves. These projects not only provide
+              essential resources but also foster local empowerment and long-term sustainability.</p>
+            <div class="grid-imgs">
+              <img src="../images/Wells/photo_10_2025-05-03_11-15-51.jpg" alt="">
+              <img src="../images/Wells/photo_11_2025-05-03_11-15-51.jpg" alt="">
+              <img src="../images/Wells/photo_12_2025-05-03_11-15-51.jpg" alt="">
+              <img src="../images/Wells/photo_13_2025-05-03_11-15-51.jpg" alt="">
+              <img src="../images/Wells/photo_14_2025-05-03_11-15-51.jpg" alt="">
+              <img src="../images/Wells/photo_15_2025-05-03_11-15-51.jpg" alt="">
+            </div>
+            <p>From the smiles of children drinking clean water for the first time to the relief on the 
+              faces of mothers who no longer have to walk for hours, the impact is visible and immediate.
+               Our field teams work closely with locals to ensure each well is properly maintained and 
+               accessible year-round.</p>
+              <div class="grid-imgs">
+                <img src="../images/wells/photo_16_2025-05-03_11-15-51.jpg" alt="">
+                <img src="../images/wells/photo_17_2025-05-03_11-15-51.jpg" alt="">
+                <video src="../images/wells/IMG_9197.MOV" controls></video>
+                <video src="../images/wells/IMG_9217.MOV" controls></video>
+                <video src="../images/wells/IMG_9229.MOV" controls></video>
+                <video src="../images/wells/IMG_9235.MOV" controls></video>
+              </div>
+
+        </div>
       </section>
 
       <footer>
@@ -145,7 +292,7 @@ section.causes h2, section.causes p.cause { margin-inline: 0; text-align: center
         </div>
       </footer>
       <div class="copyright">
-        <p>@copyright all rights reserved hayatucharity.com</p>
+        <p>@copyright all rights reserved hayatucharityfoundation.com</p>
         <p>powered by <span class="blue">SCEC Technologies</span></p>
       </div>
     </div>
@@ -157,6 +304,12 @@ section.causes h2, section.causes p.cause { margin-inline: 0; text-align: center
     <script src="../js/script.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script>
+      $('.price').click(function () {
+        $('.price').removeClass("active");
+        $(this).toggleClass("active");
+      });
     </script>
   </body>
 </html>

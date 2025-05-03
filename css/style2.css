@@ -499,7 +499,9 @@ section.adv{
     background-color: #CD004A;
     height: 50px;
 }
-
+#baw{
+  cursor: pointer;
+}
 @media (max-width:768px) {
   section.blog{
     width: 100%;
