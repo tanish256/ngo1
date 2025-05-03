@@ -499,7 +499,7 @@ section.adv{
     background-color: #CD004A;
     height: 50px;
 }
-#baw{
+#baw,#qurban{
   cursor: pointer;
 }
 @media (max-width:768px) {

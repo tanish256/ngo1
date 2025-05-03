@@ -145,7 +145,7 @@ section.causes h2, section.causes p.cause { margin-inline: 0; text-align: center
 
             <li class="card" data-aos="fade-up" data-aos-duration="900">
               <img src="qurban.jpg" alt="" />
-              <h4>Qurban</h4>
+              <h4 id="qurban">Qurban</h4>
               <p>
                 Through our Qurban project, we distribute fresh meat to underprivileged families, ensuring they share in the joy of the season. Your support helps provide nourishment to those in need.
               </p>
@@ -154,7 +154,7 @@ section.causes h2, section.causes p.cause { margin-inline: 0; text-align: center
     
             <li class="card" data-aos="fade-up" data-aos-duration="800">
                 <img src="images/hyt/photo_21_2025-02-12_23-19-02.jpg" alt="" />
-                <h4>Boreholes</h4>
+                <h4 id="baw">Build a Boreholes</h4>
                 <p>
                     Access to clean water is a basic human right. Help us build Boreholes to provide safe water to communities in need.
                 </p>
@@ -267,6 +267,13 @@ section.causes h2, section.causes p.cause { margin-inline: 0; text-align: center
     <script src="js/script.js"></script>
     <script>
       AOS.init();
+      $('#baw').click(function () {
+        window.open('projects/wells.html', '_self').focus();
+      });
+      $('#qurban').click(function () {
+        window.open('projects/qurban.html', '_self').focus();
+      });
     </script>
+
   </body>
 </html>
