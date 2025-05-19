@@ -136,7 +136,7 @@ section.causes h2, section.causes p.cause { margin-inline: 0; text-align: center
 
             <li data-aos="fade-up" data-aos-duration="800" class="card">
               <img src="images/hyt/photo_39_2025-02-12_23-19-02.jpg" alt="" />
-              <h4>Ramadhan Iftar</h4>
+              <h4 id="feeding" style="cursor: pointer;">Ramadhan Iftar</h4>
               <p>
                 During the holy month of Ramadhan, we organize Iftar meals for underprivileged families, ensuring they can break their fast with a nutritious meal. Your support helps provide food and comfort to those in need during this sacred time.
               </p>
@@ -267,6 +267,9 @@ section.causes h2, section.causes p.cause { margin-inline: 0; text-align: center
     <script src="js/script.js"></script>
     <script>
       AOS.init();
+       $('#feeding').click(function () {
+        window.open('projects/feeding.html', '_self').focus();
+      });
       $('#baw').click(function () {
         window.open('projects/wells.html', '_self').focus();
       });
