@@ -57,6 +57,32 @@ section.causes h2,p.cause { margin-inline: 0; text-align: center; width: 100%; }
   cursor: pointer;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
 
 @media (max-width:768px) {
     .gallery {
@@ -75,10 +101,11 @@ section.causes h2,p.cause { margin-inline: 0; text-align: center; width: 100%; }
             <a href="projects.html"><li>Projects</li></a>
             <a href="stories.html"><li>Our Stories</li></a>
             <a href="#" class="live"><li>Gallery</li></a>
+            <a href="scholarship.html"><li>Scholarships</li></a>
             <a href="about.html"><li>About Us</li></a>
             <a href="contact.html"><li>Contact</li></a>
             <div class="buttons l">
-              <button onclick="window.location.href='contact.html'">Volunteer</button>
+              <button onclick="window.location.href='volunteer.html'">Volunteer</button>
               <button onclick="donate()">Donate</button>
             </div>
           </ul>
@@ -121,7 +148,7 @@ section.causes h2,p.cause { margin-inline: 0; text-align: center; width: 100%; }
             </g>
           </svg>
           <div class="buttons">
-            <button onclick="window.location.href='contact.html'">Volunteer</button>
+            <button onclick="window.location.href='volunteer.html'">Volunteer</button>
             <button onclick="donate()">Donate</button>
           </div>
         </nav>
@@ -129,9 +156,10 @@ section.causes h2,p.cause { margin-inline: 0; text-align: center; width: 100%; }
       <section class="adv">
         <p>A small donation can be a life changing moment for someone Donate to change someones life</p>
       </section>
-      <div class="gallery">
+      <div id="gallery" class="gallery">
        
     </div>
+    <div id="pagination" class="pagination"></div>
     
     <div id="modal" class="modal">
         <span class="close" id="close">&times;</span>
@@ -151,6 +179,7 @@ section.causes h2,p.cause { margin-inline: 0; text-align: center; width: 100%; }
             <a href="projects.html"><li>Projects</li></a>
             <a href="stories.html"><li>Our Stories</li></a>
             <a href="#"><li>Gallery</li></a>
+            <a href="scholarship.html"><li>Scholarships</li></a>
             <a href="about.html"><li>About Us</li></a>
             <a href="contact.html"><li>Contact</li></a>
           </ul>
@@ -187,86 +216,120 @@ section.causes h2,p.cause { margin-inline: 0; text-align: center; width: 100%; }
     <button id="topBtn" onclick="scrollToTop()">&uarr;</button>
     <script src="js/jquery.min.js"></script>
     <script src="js/script.js"></script>
+    <script>AOS.init();</script>
 
-<script>
-  const imageData = {
-    "images": [
-      "images/hyt/photo_1_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_2_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_3_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_4_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_5_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_6_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_7_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_8_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_9_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_10_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_11_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_12_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_13_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_14_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_15_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_16_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_17_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_18_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_19_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_20_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_21_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_22_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_23_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_24_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_25_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_26_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_27_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_28_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_29_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_30_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_31_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_32_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_33_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_34_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_35_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_36_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_37_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_38_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_39_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_40_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_41_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_42_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_43_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_44_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_45_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_46_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_47_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_48_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_49_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_50_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_51_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_52_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_53_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_54_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_55_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_56_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_57_2025-02-12_23-19-02.jpg",
-      "images/hyt/photo_58_2025-02-12_23-19-02.jpg"
-    ]
-  };
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const galleryDiv = document.querySelector(".gallery");
+    <script>
+      function loadGallery(page) {
+          $.ajax({
+              url: "get-img.php",
+              type: "GET",
+              data: { page: page },
+              dataType: "json",
+              success: function (response) {
+                  var gallery = $("#gallery");
+                  gallery.empty(); // Clear old images
+                  
+                  $.each(response.images, function(index, image) {
+                      var img = $("<img>").attr("src", image.file_path)
+                                          .addClass("gallery-image");
+                      gallery.append(img);
+                  });
 
-    imageData.images.forEach(src => {
-      const img = document.createElement("img");
-      img.src = src;
-      img.classList.add("gallery-image");
-      img.setAttribute("data-aos", "fade-up");
-      img.setAttribute("data-aos-duration", "800");
-      galleryDiv.appendChild(img);
+                  setupPagination(response.totalPages, page);
+              },
+              error: function () {
+                  console.error("Error loading images.");
+              }
+          });
+      }
+
+      function setupPagination(totalPages, currentPage) {
+          var pagination = $("#pagination");
+          pagination.empty();
+
+          for (var i = 1; i <= totalPages; i++) {
+              var link = $("<a>").attr("href", "#").text(i);
+              if (i === currentPage) {
+                  link.addClass("active");
+              }
+              link.on("click", function (e) {
+                  e.preventDefault();
+                  var page = parseInt($(this).text());
+                  loadGallery(page);
+              });
+              pagination.append(link);
+          }
+      }
+
+      // Load images when page loads
+      $(document).ready(function() {
+          loadGallery(1);
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        let currentIndex = 0;
+        const modal = $("#modal");
+        const modalImg = $("#modal-img");
+        const closeBtn = $("#close");
+        const prevBtn = $("#prev");
+        const nextBtn = $("#next");
+
+        // Open the modal when an image is clicked (delegation to #gallery)
+        $("#gallery").on("click", ".gallery-image", function() {
+            currentIndex = $(".gallery-image").index(this);
+            modal.show();
+            modalImg.attr("src", $(this).attr("src"));
+        });
+
+        // Close the modal when the "x" button is clicked
+        closeBtn.on("click", function() {
+            modal.hide();
+        });
+
+        // Navigate to the next image
+        nextBtn.on("click", function() {
+            currentIndex = (currentIndex + 1) % $(".gallery-image").length;
+            modalImg.attr("src", $(".gallery-image").eq(currentIndex).attr("src"));
+        });
+
+        // Navigate to the previous image
+        prevBtn.on("click", function() {
+            currentIndex = (currentIndex - 1 + $(".gallery-image").length) % $(".gallery-image").length;
+            modalImg.attr("src", $(".gallery-image").eq(currentIndex).attr("src"));
+        });
+
+        // Close the modal if the user clicks outside the image
+        $(window).on("click", function(event) {
+            if ($(event.target).is(modal)) {
+                modal.hide();
+            }
+        });
     });
-  });
-</script>
-<script>
-  AOS.init();
-</script>
-  </body>
-</html>
+
+    </script>
+      <script>
+            $(document).ready(function() {
+                $.ajax({
+                    url: 'banner_images.json',
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function(data) {
+                        // Update favicon
+                        $('link[rel="shortcut icon"]').attr('href', data.favicon);
+
+                        // Update header logo
+                        $('.root > header > nav > .logo > img').attr('src', data.main_logo);
+
+                        // Update footer logo
+                        $('footer > nav > .logo > img').attr('src', data.main_logo);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Error fetching banner image data: ' + error);
+                    }
+                });
+            });
+        </script>
+      </body>
+    </html>

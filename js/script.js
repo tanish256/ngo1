@@ -112,5 +112,5 @@ $('#menul').click(function () {
   }
 
   function donate() {
-    window.open('/Donate.html', '_self').focus();
+    window.open('donate.html', '_self').focus();
   }

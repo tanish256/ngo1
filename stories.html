@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6PL9LZQLFK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6PL9LZQLFK');
-</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hayatu Charity Foundation</title>
@@ -24,209 +15,360 @@
       href="https://fonts.googleapis.com/css2?family=Inter&family=Jomhuria&family=Kaushan+Script&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style2.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta property="og:site_name" content="Hayatu Charity Foundation"/>
+    <meta property="og:title" content="Hayatu Charity Foundation">
+    <meta property="og:description" content="Hayatu Charity Foundation">
+    <meta property="og:image" content="/images/bg2.jpg">
   </head>
+  <style>
+    header{
+        height: 60vh !important;
+        nav{
+            min-height: 80px;
+        }
+    }
+    
+    @media (max-width:600px) {
+        
+    }
+  </style>
   <body>
-    <style>
-      li { list-style-type: none; }
-header { height: 80px; background: white !important; }
-header nav { height: 100%; background-color: white; }
-header nav ul a { color: black; font-weight: normal; text-decoration: none; }
-header nav svg path { stroke: black; }
-.ss { flex-direction: row-reverse; }
-.ss .img { width: 45%; }
-.ss .info { width: 33%; }
-section.causes { padding-inline: 0; margin-inline:0 ; width: 90%; }
-section.causes h2,p.cause { margin-inline: 0; text-align: center; width: 100%; }
-    </style>
     <div class="root">
       <header>
-        <nav class="container">
-          <div class="logo"><img src="images/hayatu2.svg" alt="" /></div>
+        <img class="bg" src="images/bg2.jpg" alt="" />
+        <nav class="container" style="background: rgba(48, 51, 54, 0.099);">
+          <div class="logo"><img src="images/hayatu.svg" alt="" /></div>
           <ul id="menuk">
             <a href="index.html"><li>Home</li></a>
             <a href="projects.html"><li>Projects</li></a>
             <a href="#" class="live"><li>Our Stories</li></a>
             <a href="gallery.html"><li>Gallery</li></a>
+            <a href="scholarship.html"><li>Scholarships</li></a>
             <a href="about.html"><li>About Us</li></a>
             <a href="contact.html"><li>Contact</li></a>
             <div class="buttons l">
-              <button onclick="window.location.href='contact.html'">Volunteer</button>
-              <button onclick="donate()">Donate</button>
+              <button onclick="window.location.href='volunteer.html'">Volunteer</button>
+              <button onclick="window.location.href='donation.html'">Donate</button>
             </div>
           </ul>
-          <svg id="menul" xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 200 200">
-            <g stroke-width="6.5" stroke-linecap="round">
-              <path
-                d="M72 82.286h28.75"
-                fill="#009100"
-                fill-rule="evenodd"
-                stroke="#fff"
-              />
-              <path
-                d="M100.75 103.714l72.482-.143c.043 39.398-32.284 71.434-72.16 71.434-39.878 0-72.204-32.036-72.204-71.554"
-                fill="none"
-                stroke="#fff"
-              />
-              <path
-                d="M72 125.143h28.75"
-                fill="#009100"
-                fill-rule="evenodd"
-                stroke="#fff"
-              />
-              <path
-                d="M100.75 103.714l-71.908-.143c.026-39.638 32.352-71.674 72.23-71.674 39.876 0 72.203 32.036 72.203 71.554"
-                fill="none"
-                stroke="#fff"
-              />
-              <path
-                d="M100.75 82.286h28.75"
-                fill="#009100"
-                fill-rule="evenodd"
-                stroke="#fff"
-              />
-              <path
-                d="M100.75 125.143h28.75"
-                fill="#009100"
-                fill-rule="evenodd"
-                stroke="#fff"
-              />
-            </g>
-          </svg>
+            <svg id="menul" xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 200 200">
+                  <g stroke-width="6.5" stroke-linecap="round">
+                    <path
+                      d="M72 82.286h28.75"
+                      fill="#009100"
+                      fill-rule="evenodd"
+                      stroke="#fff"
+                    />
+                    <path
+                      d="M100.75 103.714l72.482-.143c.043 39.398-32.284 71.434-72.16 71.434-39.878 0-72.204-32.036-72.204-71.554"
+                      fill="none"
+                      stroke="#fff"
+                    />
+                    <path
+                      d="M72 125.143h28.75"
+                      fill="#009100"
+                      fill-rule="evenodd"
+                      stroke="#fff"
+                    />
+                    <path
+                      d="M100.75 103.714l-71.908-.143c.026-39.638 32.352-71.674 72.23-71.674 39.876 0 72.203 32.036 72.203 71.554"
+                      fill="none"
+                      stroke="#fff"
+                    />
+                    <path
+                      d="M100.75 82.286h28.75"
+                      fill="#009100"
+                      fill-rule="evenodd"
+                      stroke="#fff"
+                    />
+                    <path
+                      d="M100.75 125.143h28.75"
+                      fill="#009100"
+                      fill-rule="evenodd"
+                      stroke="#fff"
+                    />
+                  </g>
+                </svg>
+          
           <div class="buttons">
-            <button onclick="window.location.href='contact.html'">Volunteer</button>
-            <button onclick="donate()">Donate</button>
+            <button onclick="window.location.href='volunteer.html'">Volunteer</button>
+            <button onclick="window.location.href='donation.html'">Donate</button>
           </div>
         </nav>
+        <div class="banner2">
+            <h2>Our Blog</h2>
+            <h3>Join Us On Our Journey As We Help Transform Lives</h3>
+        </div>
       </header>
-      <section class="adv">
-        <p>A small donation can be a life changing moment for someone Donate to change someones life</p>
+
+      <style>
+        @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+.container *,
+.container *::before,
+.container *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+section.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  margin-block: 2rem;
+  gap: 2rem;
+}
+.card img{
+  max-width: 100%;
+  aspect-ratio: 2/1;
+  display: block;
+  object-fit: cover;
+}
+
+.card {
+    cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: clamp(15rem, calc(18rem + 2vw), 20rem);
+  overflow: hidden;
+  box-shadow: 0 .1rem 0.5rem rgba(0, 0, 0, 0.15);
+  background: white;
+}
+
+
+
+.card__body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+
+
+.tag {
+  align-self: flex-start;
+  padding: .25em .75em;
+  border-radius: 1em;
+  font-size: .75rem;
+}
+
+.tag + .tag {
+  margin-left: .5em;
+}
+
+.tag-blue {
+  background: #56CCF2;
+background: linear-gradient(to bottom, #2F80ED, #56CCF2);
+  color: #fafafa;
+}
+
+.tag-brown {
+  background: #D1913C;
+background: linear-gradient(to bottom, #FFD194, #D1913C);
+  color: #fafafa;
+}
+
+.tag-red {
+  background: #cb2d3e;
+background: linear-gradient(to bottom, #ef473a, #cb2d3e);
+  color: #fafafa;
+}
+
+.card__body h4 {
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+.card__body p{
+    font-size: 0.8rem;
+}
+.card__footer {
+  display: flex;
+  padding: 0.5rem 1rem;
+  margin-top: auto;
+}
+
+.user {
+  display: flex;
+  gap: .5rem;
+}
+
+.user__image {
+  border-radius: 50%;
+}
+
+.user__info > small {
+  color: #666;
+}
+      </style>
+      <style>
+/* Modern Blog Container */
+section.container {
+  display: flex;
+  gap: 2rem;
+  
+  width: 90%;
+  margin: 3rem auto;
+  padding: 1rem;
+}
+
+/* Blog Card */
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Image */
+.card__header img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: scale 0.3s ease;
+}
+
+.card__header img:hover {
+  transform: scale(1.05);
+}
+
+/* Body */
+.card__body {
+  padding: 1rem 1.2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card__body h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.card__body p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Tags */
+.tag {
+  align-self: flex-start;
+  padding: 0.3em 0.8em;
+  border-radius: 2em;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.tag-brown {
+  background: linear-gradient(to right, #D1913C, #FFD194);
+}
+
+.tag-blue {
+  background: linear-gradient(to right, #2F80ED, #56CCF2);
+}
+
+.tag-red {
+  background: linear-gradient(to right, #ef473a, #cb2d3e);
+}
+
+/* Footer (author info) */
+.card__footer {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid #eee;
+  background: #fafafa;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.user__image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user__info h5 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.user__info small {
+  font-size: 0.75rem;
+  color: #999;
+}
+
+/* Smooth appearance animation */
+.card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+
+      
+      <section class="container" id="blog-container">
+
       </section>
-      <section class="blog">
 
-        <div class="blog1">
-            <h2 class="head">A VISIT TO GOOD SAMARITAN SISTERS - NALUKOLONGO <br>Spreading Hope and Kindness
-            </h2>
-            <img src="images/hyt/photo_12_2025-02-12_23-19-02.jpg" alt="" class="head">
-            <p>At Hayatu Charity Foundation, <br><br>Our mission has always been to uplift communities 
-              and support the most vulnerable among us. <br>Recently, we had the privilege of visiting 
-              <b>Good Samaritan Sisters</b>, a place dedicated to caring for individuals with disabilities 
-              and special needs. <br><br>This experience was not only humbling but also a reminder of the power of 
-              compassion and generosity.</p>
-              <h3>A Place of Care and Love</h3>
-              <p>Good Samaritan Sisters is more than just a shelter; it is a sanctuary where people with 
-                disabilities and special needs receive the care, support, and attention they deserve. The 
-                dedication of the caregivers and the resilience of the residents touched our hearts and 
-                reinforced our commitment to humanitarian work.</p>
-                <p>During our visit, we provided essential relief materials, including:
-                  <li>✅ Food supplies</li>
-                  <li>✅ Soap and other hygiene products</li>
-                  <li>✅ Sanitary materials</li>
-                  <li>✅ And much more</li>
-                  These items were given to ensure that the residents have access to basic necessities, 
-                  promoting their well-being and comfort.</p>
-                  <h3>Touching Lives, One Visit at a Time</h3>
-                  <p>Beyond material support, we also spent time visiting the sick and disabled 
-                    individuals, offering words of encouragement and prayers. The joy and gratitude 
-                    on their faces reminded us of the significance of simply being present 
-                    and showing care.</p>
-                    <h3>A Call to Action</h3>
-                    <p>Our visit to Good Samaritan Sisters was an eye-opening experience, emphasizing 
-                      the importance of collective responsibility. We invite everyone to join us in 
-                      spreading kindness—whether through donations, volunteering, or simply offering 
-                      a helping hand.<br><br>Together, we can make a difference! 🌍💙</p>
-            <div class="head grid">
-              <img src="images/hyt/photo_11_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-              <img src="images/hyt/photo_12_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-              <img src="images/hyt/photo_46_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-              <img src="images/hyt/photo_51_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-              <img src="images/hyt/photo_58_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-              <img src="images/hyt/photo_18_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-            </div>
-        </div>
-
-        <div class="blog1">
-          <h2 class="head">Fed and brought relief for the children of walakira children’s relief camp </h2>
-          <img src="images/hyt/photo_2_2025-02-12_23-19-02.jpg" alt="" class="head">
-          <p>At Hayatu Charity Foundation, <br><br>we believe in the power of compassion and collective action.
-             Recently, we had the honor of visiting Walakira Children’s Relief Camp, a place dedicated 
-             to sheltering and caring for vulnerable children. Our visit was a humbling experience,
-              reminding us of the importance of supporting the most vulnerable members of our society.</p>
-              <h3>Providing Relief and Comfort</h3>
-              <p>During our visit, we provided much-needed relief materials, including:
-                <li>✅ Food supplies</li>
-                <li>✅ Soap and hygiene products</li>
-                <li>✅ Sanitary materials</li>
-                <li>✅ Other essential items</li></p>
-                <p>Beyond material support, we also spent quality time with the children, engaging in
-                   conversations, playing games, and sharing moments of joy. Seeing their smiles and
-                    hearing their laughter was a touching reminder of the power of human connection 
-                    and kindness.</p>
-                    <h3>A Celebratory Feast</h3>
-                    <p>As part of our visit, we also organized a special celebratory meal. 
-                      We slaughtered a goat and prepared a delicious feast, ensuring that everyone, 
-                      including the children and caregivers, could enjoy a nutritious and satisfying
-                       meal together. <br>The event was filled with laughter, storytelling, and shared 
-                       happiness, making it a truly memorable experience for all.</p>
-                       <h3>A Call to Action</h3>
-                       <p>
-                        Our experience at Walakira Children’s Relief Camp reinforced our belief that small 
-                        acts of kindness can create lasting change. We encourage everyone to join us in 
-                        making a difference—through donations, volunteering, or simply spreading awareness.<br><br> Together, we can uplift lives and bring hope to those who need it most. 🌍💙</p>
-          <div class="head grid">
-            <img src="images/hyt/photo_3_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-            <img src="images/hyt/photo_44_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-            <img src="images/hyt/photo_5_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-            <img src="images/hyt/photo_16_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-            <img src="images/hyt/photo_7_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-            <img src="images/hyt/photo_8_2025-02-12_23-19-02.jpg" alt="" class="gallery-image">
-          </div>
-      </div>
-
-      </section>
-
-      <section class="b4footer">
-        <h2>
-          HAYATU CHARITY FOUNDATION IS AN ORGANIZATION AIMED AT HELPING AND
-          PROMOTING CHILDREN AROUND THE WORLD
-        </h2>
-        <div class="img">
-          <img src="images/rm2.jpg" alt="" />
-        </div>
-        <div class="donate-form">
-          <div class="heads">
-            <h4>HELP US</h4>
-            <h3>DONATE NOW</h3>
-          </div>
-          <input type="text" placeholder="your email" />
-          <input type="text" placeholder="your name" />
-          <input type="text" placeholder="amount" />
-          <input type="text" placeholder="message" />
-          <button onclick="donate()">Proceed</button>
-        </div>
-      </section>
       <footer>
         <nav>
           <div class="logo">
             <img src="images/hayatu.svg" alt="" />
           </div>
           <ul>
-            <a href="index.html"><li>Home</li></a>
+            <a href="index.html" ><li>Home</li></a>
             <a href="projects.html"><li>Projects</li></a>
-            <a href="#" ><li>Our Stories</li></a>
+            <a href="stories.html"><li>Our Stories</li></a>
             <a href="gallery.html"><li>Gallery</li></a>
-            <a href="about.html"><li>About Us</li></a>
+            <a href="scholarship.html"><li>Scholarships</li></a>
+            <a href="#"><li>About Us</li></a>
             <a href="contact.html"><li>Contact</li></a>
           </ul>
-          <button onclick="donate()">DONATE</button>
+          <button onclick="window.location.href='donation.html'">Donate</button>
         </nav>
         <p>
-          Join us in making a lasting difference. At Hayatu Charity Foundation, 
+            Join us in making a lasting difference. At Hayatu Charity Foundation, 
             we're committed to changing lives by supporting education, providing shelter, 
             and empowering communities. Every contribution counts towards building a brighter future.
-        </p>
+          </p>
         <div class="socials">
-          <a href="https://www.instagram.com/hayatu_charity_foundation?igsh=OWJmeW0zZTJ3aTM4" target="_blank">
+          <a href="https://www.instagram.com" target="_blank">
             <i class="fab fa-instagram"></i>
           </a>
           <a href="https://www.tiktok.com/@hayatucharityfoundation?_t=ZM-8tzel3iLb42&_r=1" target="_blank">
@@ -240,14 +382,6 @@ section.causes h2,p.cause { margin-inline: 0; text-align: center; width: 100%; }
           </a>
         </div>
       </footer>
-      <div id="modal" class="modal">
-        <span class="close" id="close">&times;</span>
-        <img class="modal-content" id="modal-img">
-        <div class="caption-container">
-          <button  class="prev ctrl" id="prev">&#10094;</button>
-          <button class="next ctrl" id="next">&#10095;</button>
-        </div>
-      </div>
       <div class="copyright">
         <p>@copyright all rights reserved hayatucharityfoundation.com</p>
         <p>powered by <span class="blue">SCEC Technologies</span></p>
@@ -258,6 +392,108 @@ section.causes h2,p.cause { margin-inline: 0; text-align: center; width: 100%; }
       </a>
     <button id="topBtn" onclick="scrollToTop()">&uarr;</button>
     <script src="js/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/imakewebthings/waypoints/4.0.1/lib/jquery.waypoints.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+$(document).ready(function () {
+    // API URL (replace with your actual API endpoint)
+    var apiUrl = 'get_blogs.php';
+    function timeAgo(date) {
+            const now = new Date();
+            const past = new Date(date);
+            const diffInSeconds = Math.floor((now - past) / 1000);
+            const diffInMinutes = Math.floor(diffInSeconds / 60);
+            const diffInHours = Math.floor(diffInMinutes / 60);
+            const diffInDays = Math.floor(diffInHours / 24);
+            const diffInWeeks = Math.floor(diffInDays / 7);
+            
+            if (diffInMinutes < 1) return "Just now";
+            if (diffInMinutes < 60) return `${diffInMinutes} mins ago`;
+            if (diffInHours < 24) return `${diffInHours} hours ago`;
+            if (diffInDays === 1) return "Yesterday";
+            if (diffInDays < 7) return `${diffInDays} days ago`;
+            if (diffInWeeks < 4) return `${diffInWeeks} weeks ago`;
+            return past.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        }
+
+    $.getJSON(apiUrl, function (data) {
+        var cardsContainer = $('#blog-container'); // Make sure you have a container for cards in your HTML
+        cardsContainer.empty(); // Clear previous content
+
+        data.blogs.forEach(function (item) {
+            var formattedDate = timeAgo(item.date_edited);
+            var formattedTitle = item.title.toLowerCase().replace(/\s+/g, '-').replace(/['"]+/g, '');
+            var card = `
+                <div class="card" onclick='window.location.href="blog/${formattedTitle}"' style="cursor: pointer;">
+                    <div class="card__header">
+                        <img src="${item.banner_img}" alt="card__image" class="card__image" width="600">
+                    </div>
+                    <div class="card__body">
+                        <span class="tag tag-brown">uncategorized</span>
+                        <h4>${item.title}</h4>
+                    </div>
+                    <div class="card__footer">
+                        <div class="user">
+                            <img src="https://i.pravatar.cc/40?img=3" alt="user__image" class="user__image">
+                            <div class="user__info">
+                                <h5>${item.author}</h5>
+                                <small>${formattedDate}</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+            
+            cardsContainer.append(card);
+        });
+    }).fail(function () {
+        console.error('Failed to fetch blog data.');
+    });
+});
+
+    </script>
+  <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: 'banner_images.json',
+                type: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    // Update favicon
+                    $('link[rel="shortcut icon"]').attr('href', data.favicon);
+
+                    // Update header logo
+                    $('.root > header > nav > .logo > img').attr('src', data.main_logo);
+
+                    // Update footer logo
+                    $('footer > nav > .logo > img').attr('src', data.main_logo);
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error fetching banner image data: ' + error);
+                }
+            });
+        });
+    </script>
+  <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: 'banner_images.json',
+                type: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    // Update favicon
+                    $('link[rel="shortcut icon"]').attr('href', data.favicon);
+
+                    // Update header logo
+                    $('.root > header > nav > .logo > img').attr('src', data.main_logo);
+
+                    // Update footer logo
+                    $('footer > nav > .logo > img').attr('src', data.main_logo);
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error fetching banner image data: ' + error);
+                }
+            });
+        });
+    </script>
   </body>
 </html>

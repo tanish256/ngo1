@@ -1,0 +1,4 @@
+RewriteEngine On
+
+# Rewrite rule for blog post URL
+RewriteRule ^blog/([a-z0-9-]+)$ blog.php?title=$1 [L]

@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/scholarship.css">
+</head>
+<body>
+    <header>
+    <img id="header_bg_img" class="bg" src="images/img4.webp" alt="" />
+    <nav class="container" style="background: rgba(48, 51, 54, 0.099);">
+        <div class="logo"><img src="images/hayatu.svg" alt="" /></div>
+        <ul id="menuk">
+        <a href="index.html"><li>Home</li></a>
+        <a href="projects.html"><li>Projects</li></a>
+        <a href="stories.html"><li>Our Stories</li></a>
+        <a href="gallery.html"><li>Gallery</li></a>
+        <a href="#" class="live"><li>Scholarships</li></a>
+        <a href="about.html"><li>About Us</li></a>
+        <a href="contact.html"><li>Contact</li></a>
+        <div class="buttons l">
+            <button onclick="window.location.href='volunteer.html'">Volunteer</button>
+            <button onclick="window.location.href='donation.html'">Donate</button>
+        </div>
+        </ul>
+        <svg id="menul" xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 200 200">
+                <g stroke-width="6.5" stroke-linecap="round">
+                <path
+                    d="M72 82.286h28.75"
+                    fill="#009100"
+                    fill-rule="evenodd"
+                    stroke="#fff"
+                />
+                <path
+                    d="M100.75 103.714l72.482-.143c.043 39.398-32.284 71.434-72.16 71.434-39.878 0-72.204-32.036-72.204-71.554"
+                    fill="none"
+                    stroke="#fff"
+                />
+                <path
+                    d="M72 125.143h28.75"
+                    fill="#009100"
+                    fill-rule="evenodd"
+                    stroke="#fff"
+                />
+                <path
+                    d="M100.75 103.714l-71.908-.143c.026-39.638 32.352-71.674 72.23-71.674 39.876 0 72.203 32.036 72.203 71.554"
+                    fill="none"
+                    stroke="#fff"
+                />
+                <path
+                    d="M100.75 82.286h28.75"
+                    fill="#009100"
+                    fill-rule="evenodd"
+                    stroke="#fff"
+                />
+                <path
+                    d="M100.75 125.143h28.75"
+                    fill="#009100"
+                    fill-rule="evenodd"
+                    stroke="#fff"
+                />
+                </g>
+            </svg>
+        
+        <div class="buttons">
+        <button onclick="window.location.href='volunteer.html'">Volunteer</button>
+        <button onclick="window.location.href='donation.html'">Donate</button>
+        </div>
+    </nav>
+    </header>
+    <div class="main container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-icon">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h1>Scholarship Application</h1>
+            <p>Apply for educational support to continue your learning journey. We're here to help you achieve your dreams.</p>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-info">
+                <span>Step 1 of 5</span>
+                <span>20% Complete</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 20%;"></div>
+            </div>
+            
+            <div class="progress-steps">
+                <div class="progress-step active">
+                    <div class="step-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <span class="step-title">Personal Info</span>
+                </div>
+                <div class="progress-step">
+                    <div class="step-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <span class="step-title">Education</span>
+                </div>
+                <div class="progress-step">
+                    <div class="step-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <span class="step-title">Family</span>
+                </div>
+                <div class="progress-step">
+                    <div class="step-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <span class="step-title">Scholarship</span>
+                </div>
+                <div class="progress-step">
+                    <div class="step-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <span class="step-title">Review</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Application Form -->
+        <div class="card">
+            <div class="card-content">
+                <!-- Step 1: Personal Information -->
+                <div id="step1" class="form-section">
+                    <div class="section-header">
+                        <h2>Personal Information</h2>
+                        <p>Tell us about yourself</p>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="firstName" class="required">First Name</label>
+                            <input type="text" id="firstName" placeholder="Enter your first name" required>
+                            <div class="error-message" id="firstNameError">Please enter your first name</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName" class="required">Last Name</label>
+                            <input type="text" id="lastName" placeholder="Enter your last name" required>
+                            <div class="error-message" id="lastNameError">Please enter your last name</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="dateOfBirth">Date of Birth</label>
+                            <input type="date" id="dateOfBirth">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Gender</label>
+                            <div class="select-wrapper">
+                                <select id="gender">
+                                    <option value="" selected disabled>Select gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="required">Email Address</label>
+                            <input type="email" id="email" placeholder="Enter your email" required>
+                            <div class="error-message" id="emailError">Please enter a valid email address</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="required">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                            <div class="error-message" id="phoneError">Please enter your phone number</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="nationality">Nationality</label>
+                            <input type="text" id="nationality" placeholder="Enter your nationality">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Home Address</label>
+                        <textarea id="address" placeholder="Enter your complete address" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <!-- Step 2: Educational Background -->
+                <div id="step2" class="form-section hidden">
+                    <div class="section-header">
+                        <h2>Educational Background</h2>
+                        <p>Tell us about your education</p>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="required">Current Grade/Level</label>
+                                <input id="currentGrade" type="text" required placeholder="e.g., primary 7, primary 3, S4, etc">
+                                </input>
+                            <div class="error-message" id="currentGradeError">Please select your current grade</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="schoolName" class="required">School/Institution Name</label>
+                            <input type="text" id="schoolName" placeholder="Enter your school name" required>
+                            <div class="error-message" id="schoolNameError">Please enter your school name</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gpa">Current GPA/Grade Average</label>
+                            <input type="text" id="gpa" placeholder="e.g., 3.5 or 85%">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="previousGrades">Previous Academic Performance</label>
+                        <textarea id="previousGrades" placeholder="Describe your academic performance in previous grades/years" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="achievements">Academic Achievements</label>
+                        <textarea id="achievements" placeholder="List any academic awards, honors, or achievements" rows="4"></textarea>
+                    </div>
+                </div>
+
+                <!-- Step 3: Family Information -->
+                <div id="step3" class="form-section hidden">
+                    <div class="section-header">
+                        <h2>Family Information</h2>
+                        <p>Help us understand your family situation</p>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="parentName" class="required">Parent/Guardian Name</label>
+                            <input type="text" id="parentName" placeholder="Enter parent/guardian name" required>
+                            <div class="error-message" id="parentNameError">Please enter parent/guardian name</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="parentOccupation">Parent/Guardian Occupation</label>
+                            <input type="text" id="parentOccupation" placeholder="Enter occupation">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="required">Monthly Family Income</label>
+                                <input id="familyIncome" required placeholder="e.g., below ugx100k, ugx100-ugx300, ugx300-ugx500, above ugx500">
+                            <div class="error-message" id="familyIncomeError">Please select family income range</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="siblings">Number of Siblings</label>
+                            <input type="number" id="siblings" placeholder="Enter number of siblings">
+                        </div>
+                        <div class="form-group">
+                        <label for="challenges">Financial/Personal Challenges</label>
+                        <textarea id="challenges" placeholder="Describe any financial difficulties or personal challenges affecting your education" rows="4"></textarea>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- Step 4: Scholarship Details -->
+                <div id="step4" class="form-section hidden">
+                    <div class="section-header">
+                        <h2>Scholarship Details</h2>
+                        <p>Specify the type of support you need</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="mb-4 required">Scholarship Type</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="primary" name="scholarshipType" value="primary" class="radio-input" required>
+                                <label for="primary" class="radio-label">
+                                    <div>Primary School Support</div>
+                                </label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="secondary" name="scholarshipType" value="secondary" class="radio-input">
+                                <label for="secondary" class="radio-label">
+                                    <div>Secondary School Support</div>
+                                </label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="university" name="scholarshipType" value="university" class="radio-input">
+                                <label for="university" class="radio-label">
+                                    <div>University/College Support</div>
+                                </label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="vocational" name="scholarshipType" value="vocational" class="radio-input">
+                                <label for="vocational" class="radio-label">
+                                    <div>Vocational Training Support</div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="error-message" id="scholarshipTypeError">Please select a scholarship type</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="requestedAmount">Requested Amount (UGX)</label>
+                        <input type="number" id="requestedAmount" placeholder="Enter the amount you need">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reason" class="required">Why do you need this scholarship?</label>
+                        <textarea id="reason" placeholder="Explain why you need this scholarship and how it will help you" rows="4" required></textarea>
+                        <div class="error-message" id="reasonError">Please explain why you need this scholarship</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="goals">Educational Goals</label>
+                        <textarea id="goals" placeholder="Describe your educational and career goals" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="extracurriculars">Extracurricular Activities</label>
+                        <textarea id="extracurriculars" placeholder="List any clubs, sports, volunteer work, or other activities" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="mb-4">Supporting Documents</label>
+                        <div class="file-upload">
+                            <i class="fas fa-upload file-upload-icon"></i>
+                            <p>Upload transcripts, recommendation letters, or other supporting documents</p>
+                            <input type="file" multiple accept=".pdf,.doc,.docx,.jpg,.png" class="file-input" id="file-upload">
+                            <button class="btn btn-outline">
+                                <label for="file-upload" class="cursor-pointer">Choose Files</label>
+                            </button>
+                        </div>
+
+                        <div id="file-list" class="file-list hidden">
+                            <h4 class="font-medium">Uploaded Files:</h4>
+                            <!-- Files will be dynamically added here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5: Review & Submit -->
+                <div id="step5" class="form-section hidden">
+                    <div class="section-header">
+                        <h2>Review & Submit</h2>
+                        <p>Please review your application before submitting</p>
+                    </div>
+
+                    <!-- Application Summary -->
+                    <div class="summary-grid mb-6">
+                        <div class="summary-card">
+                            <div class="summary-header">
+                                <div class="summary-title">Personal Information</div>
+                            </div>
+                            <div class="summary-content">
+                                <p><strong>Name:</strong> <span id="review-name"></span></p>
+                                <p><strong>Email:</strong> <span id="review-email"></span></p>
+                                <p><strong>Phone:</strong> <span id="review-phone"></span></p>
+                                <p><strong>Date of Birth:</strong> <span id="review-dob"></span></p>
+                            </div>
+                        </div>
+
+                        <div class="summary-card">
+                            <div class="summary-header">
+                                <div class="summary-title">Education</div>
+                            </div>
+                            <div class="summary-content">
+                                <p><strong>Current Grade:</strong> <span id="review-grade"></span></p>
+                                <p><strong>School:</strong> <span id="review-school"></span></p>
+                                <p><strong>GPA:</strong> <span id="review-gpa"></span></p>
+                            </div>
+                        </div>
+
+                        <div class="summary-card">
+                            <div class="summary-header">
+                                <div class="summary-title">Family Information</div>
+                            </div>
+                            <div class="summary-content">
+                                <p><strong>Parent/Guardian:</strong> <span id="review-parent"></span></p>
+                                <p><strong>Family Income:</strong> <span id="review-income"></span></p>
+                                <p><strong>Siblings:</strong> <span id="review-siblings"></span></p>
+                            </div>
+                        </div>
+
+                        <div class="summary-card">
+                            <div class="summary-header">
+                                <div class="summary-title">Scholarship Request</div>
+                            </div>
+                            <div class="summary-content">
+                                <p><strong>Type:</strong> <span id="review-type"></span></p>
+                                <p><strong>Amount:</strong> <span id="review-amount"></span></p>
+                                <p><strong>Documents:</strong> <span id="review-docs">0 files uploaded</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Terms and Conditions -->
+                    <div class="space-y-4 p-4 bg-gray-50 rounded-lg">
+                        <h3 class="font-medium">Terms and Agreements</h3>
+                        
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="terms" class="checkbox-input" required>
+                            <label for="terms" class="checkbox-label required">
+                                I agree to the terms and conditions of the scholarship program. I understand that providing false information may result in disqualification. *
+                            </label>
+                        </div>
+
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="consent" class="checkbox-input" required>
+                            <label for="consent" class="checkbox-label required">
+                                I consent to the processing of my personal data for scholarship evaluation and communication purposes. *
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="alert mt-2">
+                        <i class="fas fa-exclamation-circle alert-icon"></i>
+                        <div class="alert-description">
+                            Please ensure all information is accurate. You will receive a confirmation email after submission, and our team will review your application within 2-3 weeks.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="nav-buttons">
+                    <button class="btn btn-outline" id="btnBack" disabled>Back</button>
+                    
+                    <div>
+                        <button class="btn btn-primary" id="btnNext" disabled>Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Help Section -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">
+                    <i class="fas fa-exclamation-circle help-icon"></i>
+                    Need Help?
+                </h3>
+            </div>
+            <div class="card-content">
+                <div class="help-grid">
+                    <div class="help-item">
+                        <i class="fas fa-envelope help-icon"></i>
+                        scholarships@hayatucharityfoundation.com
+                    </div>
+                    <div class="help-item">
+                        <i class="fas fa-phone help-icon"></i>
+                        +256706171731 / +256785656038
+                    </div>
+                    <div class="help-item">
+                        <i class="fas fa-calendar help-icon"></i>
+                        Mon-Fri 9AM-5PM
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+<nav>
+    <div class="logo">
+    <img src="images/hayatu.svg" alt="" />
+    </div>
+    <ul>
+    <a href="index.html" ><li>Home</li></a>
+    <a href="projects.html"><li>Projects</li></a>
+    <a href="stories.html"><li>Our Stories</li></a>
+    <a href="#" class="live"><li>Scholarships</li></a>
+    <a href="gallery.html"><li>Gallery</li></a>
+    <a href="about.html"><li>About Us</li></a>
+    <a href="contact.html"><li>Contact</li></a>
+    </ul>
+    <button onclick="window.location.href='donation.html'">Donate</button>
+</nav>
+<p>
+    Join us in making a lasting difference. At Hayatu Charity Foundation, 
+    we're committed to changing lives by supporting education, providing shelter, 
+    and empowering communities. Every contribution counts towards building a brighter future.
+</p>
+<p style="color: white; text-align: right; align-self: flex-end; margin-bottom: 5px; width: 80%;">+256707389302 / +256707389302</p>
+<a style="color: white; text-align: right; align-self: flex-end; margin-bottom: 10px; width: 80%;" href="mailto:hayatucharityfoundation@gmail.com">hayatucharityfoundation@gmail.com</a>
+<div class="socials">
+    <a href="https://www.instagram.com/hayatu_charity_foundation?igsh=OWJmeW0zZTJ3aTM4" target="_blank">
+    <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.tiktok.com/@hayatucharityfoundation?_t=ZM-8tzel3iLb42&_r=1" target="_blank">
+    <i class="fa-brands fa-tiktok"></i>
+    </a>
+    <a href="https://x.com/CharityHay26521" target="_blank">
+    <i class="fab fa-twitter-square"></i>
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61566345901391" target="_blank">
+    <i class="fa-brands fa-square-facebook"></i>
+    </a>
+</div>
+    </footer>
+    <div class="copyright">
+    <p>@copyright all rights reserved hayatucharityfoundation.com</p>
+    <p>powered by <span class="blue">SCEC Technologies</span></p>
+    </div>
+
+<script>
+// Basic step navigation functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const steps = document.querySelectorAll('.form-section');
+    const btnBack = document.getElementById('btnBack');
+    const btnNext = document.getElementById('btnNext');
+    const progressFill = document.querySelector('.progress-fill');
+    const progressText = document.querySelector('.progress-info span:first-child');
+    const progressPercent = document.querySelector('.progress-info span:last-child');
+    const progressSteps = document.querySelectorAll('.progress-step');
+    
+    let currentStep = 1;
+    const totalSteps = 5;
+    
+    // Define required fields for each step
+    const stepRequirements = {
+        1: ['#firstName', '#lastName', '#email', '#phone'],
+        2: ['#currentGrade', '#schoolName'],
+        3: ['#parentName', '#familyIncome'],
+        4: ['input[name="scholarshipType"]', '#reason'],
+        5: ['#terms', '#consent']
+    };
+    
+    // Check if all required fields in current step are filled
+    function isStepValid(step) {
+        const requiredFields = stepRequirements[step];
+        let isValid = true;
+        
+        requiredFields.forEach(field => {
+            if (field.startsWith('input[name="') || field === 'input[name="scholarshipType"]') {
+                // Handle radio buttons
+                const radioButtons = document.querySelectorAll(field);
+                let radioChecked = false;
+                
+                radioButtons.forEach(radio => {
+                    if (radio.checked) radioChecked = true;
+                });
+                
+                if (!radioChecked) isValid = false;
+            } else {
+                // Handle other input types
+                const element = document.querySelector(field);
+                if (!element.value.trim()) isValid = false;
+                
+                // Special case for checkboxes
+                if (element.type === 'checkbox' && !element.checked) isValid = false;
+            }
+        });
+        
+        return isValid;
+    }
+    
+    // Validate a specific field
+    function validateField(field) {
+        const errorElement = document.getElementById(field.id + 'Error');
+        
+        if (field.hasAttribute('required') && !field.value.trim()) {
+            if (errorElement) errorElement.style.display = 'block';
+            return false;
+        } else {
+            if (errorElement) errorElement.style.display = 'none';
+            return true;
+        }
+    }
+    
+    // Validate radio buttons
+    function validateRadioButtons(name) {
+        const radioButtons = document.querySelectorAll(`input[name="${name}"]`);
+        const errorElement = document.getElementById(name + 'Error');
+        let isValid = false;
+        
+        radioButtons.forEach(radio => {
+            if (radio.checked) isValid = true;
+        });
+        
+        if (!isValid && errorElement) {
+            errorElement.style.display = 'block';
+        } else if (errorElement) {
+            errorElement.style.display = 'none';
+        }
+        
+        return isValid;
+    }
+    
+    // Update progress display
+    function updateProgress() {
+        const progressPercentValue = (currentStep / totalSteps) * 100;
+        progressFill.style.width = `${progressPercentValue}%`;
+        progressText.textContent = `Step ${currentStep} of ${totalSteps}`;
+        progressPercent.textContent = `${Math.round(progressPercentValue)}% Complete`;
+        
+        // Update step indicators
+        progressSteps.forEach((step, index) => {
+            step.classList.remove('active', 'completed');
+            if (index + 1 === currentStep) {
+                step.classList.add('active');
+            } else if (index + 1 < currentStep) {
+                step.classList.add('completed');
+            }
+        });
+        
+        // Update button states
+        btnBack.disabled = currentStep === 1;
+        btnNext.disabled = !isStepValid(currentStep);
+        
+        if (currentStep < totalSteps) {
+            btnNext.textContent = 'Continue';
+            btnNext.classList.remove('btn-success');
+            btnNext.classList.add('btn-primary');
+        } else {
+            btnNext.innerHTML = '<i class="fas fa-check-circle mr-2"></i> Submit Application';
+            btnNext.classList.remove('btn-primary');
+            btnNext.classList.add('btn-success');
+            updateReviewSection();
+        }
+    }
+    
+    // Navigate to a specific step
+    function goToStep(step) {
+        steps.forEach((section, index) => {
+            if (index + 1 === step) {
+                section.classList.remove('hidden');
+            } else {
+                section.classList.add('hidden');
+            }
+        });
+        
+        currentStep = step;
+        updateProgress();
+    }
+    
+    // Update review section with form data
+    function updateReviewSection() {
+        document.getElementById('review-name').textContent = 
+            `${document.getElementById('firstName').value} ${document.getElementById('lastName').value}`;
+        document.getElementById('review-email').textContent = document.getElementById('email').value;
+        document.getElementById('review-phone').textContent = document.getElementById('phone').value;
+        document.getElementById('review-dob').textContent = document.getElementById('dateOfBirth').value || 'Not provided';
+        
+        document.getElementById('review-grade').textContent = document.getElementById('currentGrade').value || 'Not provided';
+        document.getElementById('review-school').textContent = document.getElementById('schoolName').value;
+        document.getElementById('review-gpa').textContent = document.getElementById('gpa').value || 'Not provided';
+        
+        document.getElementById('review-parent').textContent = document.getElementById('parentName').value;
+        document.getElementById('review-income').textContent = document.getElementById('familyIncome').value || 'Not provided'
+        document.getElementById('review-siblings').textContent = document.getElementById('siblings').value || 'Not provided';
+        
+        const scholarshipType = document.querySelector('input[name="scholarshipType"]:checked');
+        document.getElementById('review-type').textContent = 
+            scholarshipType ? document.querySelector(`label[for="${scholarshipType.id}"] div:first-child`).textContent : 'Not selected';
+        document.getElementById('review-amount').textContent = document.getElementById('requestedAmount').value || 'Not specified';
+    }
+    
+    // Add event listeners to all required fields
+    function setupValidation() {
+        // Text inputs
+        document.querySelectorAll('input[required], select[required], textarea[required]').forEach(field => {
+            field.addEventListener('input', () => {
+                validateField(field);
+                updateProgress();
+            });
+            
+            field.addEventListener('change', () => {
+                validateField(field);
+                updateProgress();
+            });
+        });
+        
+        // Radio buttons
+        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                validateRadioButtons(radio.name);
+                updateProgress();
+            });
+        });
+        
+        // Checkboxes
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                updateProgress();
+            });
+        });
+    }
+    
+    // Next button click handler
+    btnNext.addEventListener('click', function() {
+        if (currentStep < totalSteps) {
+            goToStep(currentStep + 1);
+        } else {
+            // Check if terms are accepted
+            const termsAccepted = document.getElementById('terms').checked;
+            const dataConsent = document.getElementById('consent').checked;
+            
+            if (termsAccepted && dataConsent) {
+                submitApplication();
+                //alert('Application submitted successfully! Thank you for applying.');
+                // In a real application, you would submit the form data to a server here
+            } else {
+                alert('Please accept the terms and conditions before submitting.');
+            }
+        }
+    });
+    
+    // Back button click handler
+    btnBack.addEventListener('click', function() {
+        if (currentStep > 1) {
+            goToStep(currentStep - 1);
+        }
+    });
+    
+    const fileInput = document.getElementById('file-upload');
+    const fileList = document.getElementById('file-list');
+    let uploadedFiles = [];
+
+    fileInput.addEventListener('change', function() {
+        if (this.files.length > 0) {
+            // Add new files to our array
+            for (let i = 0; i < this.files.length; i++) {
+                const file = this.files[i];
+                // Check if file already exists
+                if (!uploadedFiles.some(f => f.name === file.name && f.size === file.size)) {
+                    uploadedFiles.push(file);
+                }
+            }
+            
+            updateFileList();
+            fileList.classList.remove('hidden');
+        }
+    });
+
+    function updateFileList() {
+        // Clear the file list
+        fileList.innerHTML = '<h4 class="font-medium">Uploaded Files:</h4>';
+        
+        if (uploadedFiles.length === 0) {
+            fileList.classList.add('hidden');
+            document.getElementById('review-docs').textContent = '0 files uploaded';
+            return;
+        }
+        
+        // Update the file count in the review section
+        document.getElementById('review-docs').textContent = `${uploadedFiles.length} files uploaded`;
+        
+        // Add each file to the list
+        uploadedFiles.forEach((file, index) => {
+            const fileItem = document.createElement('div');
+            fileItem.className = 'file-item';
+            fileItem.innerHTML = `
+                <div class="file-info">
+                    <i class="fas fa-file-text file-icon"></i>
+                    <span class="file-name">${file.name}</span>
+                    <span class="file-size">(${formatFileSize(file.size)})</span>
+                </div>
+                <button class="file-remove" data-index="${index}">Remove</button>
+            `;
+            fileList.appendChild(fileItem);
+        });
+        
+        // Add event listeners to remove buttons
+        document.querySelectorAll('.file-remove').forEach(button => {
+            button.addEventListener('click', function() {
+                const index = parseInt(this.getAttribute('data-index'));
+                uploadedFiles.splice(index, 1);
+                updateFileList();
+            });
+        });
+    }
+
+    function formatFileSize(bytes) {
+        if (bytes === 0) return '0 Bytes';
+        const k = 1024;
+        const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    }
+
+    setupValidation();
+    goToStep(1);
+});
+</script>
+<script>
+function submitApplication() {
+    const formData = new FormData();
+
+    // Step 1: Personal Information
+    formData.append('firstName', document.getElementById('firstName').value.trim());
+    formData.append('lastName', document.getElementById('lastName').value.trim());
+    formData.append('email', document.getElementById('email').value.trim());
+    formData.append('phone', document.getElementById('phone').value.trim());
+    formData.append('dateOfBirth', document.getElementById('dateOfBirth').value.trim());
+    formData.append('gender', document.getElementById('gender').value);
+    formData.append('nationality', document.getElementById('nationality').value.trim());
+    formData.append('address', document.getElementById('address').value.trim());
+
+    // Step 2: Educational Background
+    formData.append('currentGrade', document.getElementById('currentGrade').value);
+    formData.append('schoolName', document.getElementById('schoolName').value.trim());
+    formData.append('gpa', document.getElementById('gpa').value.trim());
+    formData.append('previousGrades', document.getElementById('previousGrades').value.trim());
+    formData.append('achievements', document.getElementById('achievements').value.trim());
+
+    // Step 3: Family Information
+    formData.append('parentName', document.getElementById('parentName').value.trim());
+    formData.append('parentOccupation', document.getElementById('parentOccupation').value.trim());
+    formData.append('familyIncome', document.getElementById('familyIncome').value);
+    formData.append('siblings', document.getElementById('siblings').value.trim());
+    formData.append('challenges', document.getElementById('challenges').value.trim());
+
+    // Step 4: Scholarship Details
+    const scholarshipType = document.querySelector('input[name="scholarshipType"]:checked');
+    if (scholarshipType) {
+        formData.append('scholarshipType', scholarshipType.value);
+    }
+    formData.append('reason', document.getElementById('reason').value.trim());
+    formData.append('requestedAmount', document.getElementById('requestedAmount').value.trim());
+    formData.append('goals', document.getElementById('goals').value.trim());
+    formData.append('extracurriculars', document.getElementById('extracurriculars').value.trim());
+
+    // Step 5: Terms and Consent
+    formData.append('terms', document.getElementById('terms').checked);
+    formData.append('consent', document.getElementById('consent').checked);
+
+    // Files
+    const files = document.getElementById('file-upload').files;
+    for (let i = 0; i < files.length; i++) {
+        formData.append('documents[]', files[i]);
+    }
+
+    // Send AJAX request
+    fetch('scholarship-endpoint.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        return response.json().then(data => {
+            if (!response.ok) {
+                throw data;
+            }
+            return data;
+        });
+    })
+    .then(data => {
+        window.location.href = 'application-success.html';
+    })
+    .catch(err => {
+        alert(err.error || 'An error occurred while submitting your application. Please try again later.');
+    });
+}
+</script>
+
+</body>
+</html>

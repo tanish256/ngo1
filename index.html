@@ -37,7 +37,7 @@
   <body>
     <div class="root">
       <header>
-        <img class="bg" src="bgmain.jpg" alt="" />
+        <img id="header_bg_img" class="bg" src="images/img4.webp" alt="" />
         <nav class="container" style="background: rgba(48, 51, 54, 0.099);">
           <div class="logo"><img src="images/hayatu.svg" alt="" /></div>
           <ul id="menuk">
@@ -45,10 +45,11 @@
             <a href="projects.html"><li>Projects</li></a>
             <a href="stories.html"><li>Our Stories</li></a>
             <a href="gallery.html"><li>Gallery</li></a>
+            <a href="scholarship.html"><li>Scholarships</li></a>
             <a href="about.html"><li>About Us</li></a>
             <a href="contact.html"><li>Contact</li></a>
             <div class="buttons l">
-              <button onclick="window.location.href='contact.html'">Volunteer</button>
+              <button onclick="window.location.href='volunteer.html'">Volunteer</button>
               <button onclick="donate()">Donate</button>
             </div>
           </ul>
@@ -92,7 +93,7 @@
                 </svg>
           
           <div class="buttons">
-            <button onclick="window.location.href='contact.html'">Volunteer</button>
+            <button onclick="window.location.href='volunteer.html'">Volunteer</button>
             <button onclick="donate()">Donate</button>
           </div>
         </nav>
@@ -147,8 +148,8 @@
         <p class="cause">
           We dedicate ourselves to providing housing, education, and emotional support to children in need, while also working on a variety of community projects to help those who are less fortunate.
         </p>
-        <section class="cause">
-            <li data-aos="fade-up" data-aos-duration="800" class="card">
+        <section class="cause" id="projects-list">
+            <li class="card">
                 <img src="images/hyt/photo_22_2025-02-12_23-19-02.jpg" alt="" class="gallery-image"/>
                 <h4>Better Shelter for Families</h4>
                 <p>
@@ -175,8 +176,8 @@
                 <button onclick="donate()">Support</button>
             </li>
     
-            <li data-aos="fade-up" data-aos-duration="800" class="card">
-                <img src="images/schola.jpg" alt="" class="gallery-image"/>
+            <li class="card">
+                <img src="images/schola.jpg" alt="" />
                 <h4>Hayatu Scholarship Fund</h4>
                 <p>
                   Helping bright kids stay in school by providing scholarships for their education from primary school through to higher levels.
@@ -184,13 +185,13 @@
                 <button onclick="donate()">Support</button>
             </li>
     
-            <li data-aos="fade-up" data-aos-duration="800" class="card">
-              <img src="qurban.jpg" alt="" class="gallery-image"/>
-              <h4 id="qurban">Qurban</h4>
+            <li class="card">
+              <img src="images/qurban.png" alt="" />
+              <h4>Qurban</h4>
               <p>
                 Through our Qurban project, we distribute fresh meat to underprivileged families, ensuring they share in the joy of the season. Your support helps provide nourishment to those in need.
               </p>
-              <button onclick="donate()">Support</button>
+              <button>Support</button>
           </li>
     
             
@@ -201,14 +202,14 @@
                 <p>
                     We bring smiles and emotional support to those in hospitals, spreading kindness and warmth to those fighting illness.
                 </p>
-                <button onclick="donate()">Support</button>
+                <button>Support</button>
             </li>
         </section>
         <button class="projects_all" onclick="window.location.href='projects.html'">View All</button>
     </section>
     
 
-      <section class="metrics" data-aos="fade-down" data-aos-duration="800">
+      <section class="metrics">
         <div class="c">
           <h4 class="counter" data-target="33">0</h4>
           <p>volunteers</p>
@@ -228,27 +229,27 @@
       </section>
       
       <section class="ss2">
-        <div class="card" data-aos="fade-right" data-aos-duration="1000">
+        <div class="card">
           <h3>SUCCESS STORIES</h3>
           <p>
             Your contributions have led to a <span class="green"><b>450%</b></span> improvement in the lives of underprivileged children. Be part of the change.
           </p>
-          <button onclick="donate()">Donate Now</button>
+          <button>Donate Now</button>
         </div>
         <div class="ssimg">
           <div class="img1">
-            <img src="images/hyt/photo_23_2025-02-12_23-19-02.jpg" alt="" class="gallery-image"/>
-            <img src="images/hyt/photo_36_2025-02-12_23-19-02.jpg" alt="" class="gallery-image"/>
+            <img src="images/hyt/photo_23_2025-02-12_23-19-02.jpg" alt="" />
+            <img src="images/hyt/photo_36_2025-02-12_23-19-02.jpg" alt="" />
           </div>
           <div class="img2">
-            <img src="images/hyt/photo_16_2025-02-12_23-19-02.jpg" alt="" class="gallery-image"/>
-            <img src="images/hyt/photo_9_2025-02-12_23-19-02.jpg" alt="" class="gallery-image"/>
+            <img src="images/hyt/photo_16_2025-02-12_23-19-02.jpg" alt="" />
+            <img src="images/hyt/photo_9_2025-02-12_23-19-02.jpg" alt="" />
             <button onclick="window.location.href='stories.html'">view more</button>
           </div>
         </div>
       </section>
       <section class="profile">
-        <img src="images/bts.jpg" alt="Children receiving aid" class="gallery-image"/>
+        <img src="images/bts.jpg" alt="Children receiving aid" />
         <div class="cwl">
           <div class="inf">
             <h3>Together, We Can Change Lives</h3>
@@ -257,36 +258,36 @@
               orphans and underprivileged children.
             </p>
           </div>
-          <div class="sects" >
-            <div class="card" data-aos="fade-up" data-aos-duration="800">
+          <div class="sects">
+            <div class="card">
               <h4>Sponsor a Child's Education</h4>
               <p>Help cover school fees, books, and supplies to give a child a future.</p>
-              <button onclick="donate()">Donate Now</button>
+              <button>Donate Now</button>
             </div>
       
-            <div class="card" data-aos="fade-up" data-aos-duration="800">
+            <div class="card">
               <h4>Provide School Supplies</h4>
               <p>Donate notebooks, backpacks, and learning materials for students in need.</p>
-              <button onclick="donate()">Donate Now</button>
+              <button>Donate Now</button>
             </div>
       
-            <div class="card" data-aos="fade-up" data-aos-duration="800">
+            <div class="card">
               <h4>Support Basic Needs</h4>
               <p>Provide food, clothing, and medical care to vulnerable children.</p>
-              <button onclick="donate()">Donate Now</button>
+              <button>Donate Now</button>
             </div>
           </div>
         </div>
       </section>
       
       
-      <section class="b4footer" data-aos="zoom-in" data-aos-duration="8000">
+      <section class="b4footer">
         <h2>
           HAYATU CHARITY FOUNDATION IS AN ORGANIZATION AIMED AT HELPING AND
           CHANGING PEOPLES LIVES ONE AT A TIME
         </h2>
         <div class="img">
-          <img src="images/rm2.jpg" alt="" />
+          <img id="rm2_image_img" src="images/rm2.jpg" alt="" />
         </div>
         <div class="donate-form">
           <div class="heads">
@@ -297,17 +298,9 @@
           <input type="text" placeholder="your name" />
           <input type="text" placeholder="amount" />
           <input type="text" placeholder="message" />
-          <button onclick="donate()">Proceed</button>
+          <button>Proceed</button>
         </div>
       </section>
-      <div id="modal" class="modal">
-        <span class="close" id="close">&times;</span>
-        <img class="modal-content" id="modal-img">
-        <div class="caption-container">
-          <button  class="prev ctrl" id="prev">&#10094;</button>
-          <button class="next ctrl" id="next">&#10095;</button>
-        </div>
-      </div>
       <footer>
         <nav>
           <div class="logo">
@@ -318,17 +311,18 @@
             <a href="projects.html"><li>Projects</li></a>
             <a href="stories.html"><li>Our Stories</li></a>
             <a href="gallery.html"><li>Gallery</li></a>
+            <a href="scholarship.html"><li>Scholarships</li></a>
             <a href="about.html"><li>About Us</li></a>
             <a href="contact.html"><li>Contact</li></a>
           </ul>
-          <button onclick="donate()">DONATE</button>
+          <button onclick="window.location.href='donation.html'">Donate</button>
         </nav>
         <p>
           Join us in making a lasting difference. At Hayatu Charity Foundation, 
             we're committed to changing lives by supporting education, providing shelter, 
             and empowering communities. Every contribution counts towards building a brighter future.
         </p>
-        <p style="color: white; text-align: right; align-self: flex-end; margin-bottom: 5px; width: 80%;">+256706171731 / +256785656038</p>
+        <p style="color: white; text-align: right; align-self: flex-end; margin-bottom: 5px; width: 80%;">+256707389302 / +256707389302</p>
         <a style="color: white; text-align: right; align-self: flex-end; margin-bottom: 10px; width: 80%;" href="mailto:hayatucharityfoundation@gmail.com">hayatucharityfoundation@gmail.com</a>
         <div class="socials">
           <a href="https://www.instagram.com/hayatu_charity_foundation?igsh=OWJmeW0zZTJ3aTM4" target="_blank">
@@ -361,16 +355,76 @@
       AOS.init();
     </script>
     <script>
-      $('#baw').click(function () {
-        window.open('projects/wells.html', '_self').focus();
-      });
-      $('#feeding').click(function () {
-        window.open('projects/feeding.html', '_self').focus();
-      });
+        $(document).ready(function() {
+            $.ajax({
+                url: 'banner_images.json',
+                type: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    // Update Open Graph image (for consistency, though dynamic update might not affect SEO)
+                    $('meta[property="og:image"]').attr('content', data.home_bg);
 
-      $('#qurban').click(function () {
-        window.open('projects/qurban.html', '_self').focus();
-      });
+                    // Update rm2_image
+                    $('#rm2_image_img').attr('src', data.rm2_image);
+
+                    // Update header_bg_image
+                    $('#header_bg_img').attr('src', data.header_bg_image);
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error fetching banner image data: ' + error);
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: 'videos.json',
+                type: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    $('#myVideo').attr('src', data.home_video);
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error fetching video data: ' + error);
+                }
+            });
+        });
+    </script>
+    <script>
+   $(document).ready(function() {
+  $.ajax({
+    url: "get-projets.php", // Your API endpoint to fetch the projects
+    type: "GET",
+    success: function(response) {
+        // Limit to the first 6 projects
+        var limitedProjects = response.slice(0, 6);
+
+        // Loop through the limited set of projects and create the list items
+        var projectsHtml = '';
+        console.log(response);
+        limitedProjects.forEach(function(project) {
+            var projectHtml = `
+                <li class="card">
+                    <img src="${project.image}" alt="${project.title}" />
+                    <h4>${project.title}</h4>
+                    <p>${project.description}</p>
+                    <button>Support</button>
+                </li>
+            `;
+            projectsHtml += projectHtml;
+        });
+
+        // Insert the generated HTML into your target container
+        $('#projects-list').html(projectsHtml);
+    },
+    error: function(xhr) {
+        console.error("Error fetching projects:", xhr.responseText);
+    }
+});
+});
+
+      
     </script>
   </body>
 </html>

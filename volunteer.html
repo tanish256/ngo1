@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Registration - Hayatu Charity Foundation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #148d00;
+            --primary-dark: #0f6b00;
+            --accent: #ffa800;
+            --destructive: #dc2626;
+            --background: #fffcf6;
+            --foreground: #171717;
+            --muted-foreground: #525252;
+            --muted: #f5f5f5;
+            --border: #e5e5e5;
+            --ring: #a3a3a3;
+            --radius: 0.5rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom right, var(--background), white);
+            color: var(--foreground);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .header-icon {
+            width: 4rem;
+            height: 4rem;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+
+        .header-icon i {
+            color: white;
+            font-size: 2rem;
+        }
+
+        .header h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            font-size: 1.25rem;
+            color: var(--muted-foreground);
+            max-width: 48rem;
+            margin: 0 auto;
+        }
+
+        /* Grid Layout */
+        .grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        @media (min-width: 1024px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .col-span-2 {
+                grid-column: span 2;
+            }
+        }
+
+        /* Cards */
+        .card {
+            background-color: white;
+            border-radius: var(--radius);
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+        }
+
+        .card-header {
+            padding: 1.5rem 1.5rem 0;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title i {
+            margin-right: 0.5rem;
+        }
+
+        .card-description {
+            color: var(--muted-foreground);
+            font-size: 0.875rem;
+        }
+
+        .card-content {
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        /* Opportunity Cards */
+        .opportunity {
+            padding: 1rem;
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-bottom: 1rem;
+        }
+
+        .opportunity:last-child {
+            margin-bottom: 0;
+        }
+
+        .opportunity:hover {
+            border-color: #d4d4d4;
+        }
+
+        .opportunity.selected {
+            border-color: var(--primary);
+            background-color: rgba(20, 141, 0, 0.05);
+        }
+
+        .opportunity-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+        }
+
+        .opportunity-title {
+            font-weight: 500;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.25rem 0.5rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .badge-destructive {
+            background-color: rgba(220, 38, 38, 0.1);
+            color: var(--destructive);
+        }
+
+        .opportunity-description {
+            font-size: 0.875rem;
+            color: var(--muted-foreground);
+            margin-bottom: 0.75rem;
+        }
+
+        .opportunity-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            color: var(--muted-foreground);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .meta-item i {
+            margin-right: 0.25rem;
+            font-size: 0.75rem;
+        }
+
+        .opportunity-details {
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .opportunity-details h4 {
+            font-weight: 500;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .requirements-list {
+            font-size: 0.75rem;
+            color: var(--muted-foreground);
+            list-style-type: none;
+        }
+
+        .requirements-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.25rem;
+        }
+
+        .requirements-list li:before {
+            content: '';
+            width: 0.25rem;
+            height: 0.25rem;
+            background-color: var(--muted-foreground);
+            border-radius: 50%;
+            margin-top: 0.4rem;
+            margin-right: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        /* Why Volunteer Section */
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .benefit-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .benefit-icon {
+            color: var(--primary);
+            font-size: 1.25rem;
+            margin-top: 0.125rem;
+            flex-shrink: 0;
+        }
+
+        .benefit-content h4 {
+            font-weight: 500;
+            font-size: 0.875rem;
+        }
+
+        .benefit-content p {
+            font-size: 0.75rem;
+            color: var(--muted-foreground);
+        }
+
+        /* Form Elements */
+        .form-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-section h3 {
+            font-size: 1.125rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .form-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .form-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        label {
+            font-weight: 500;
+            font-size: 0.875rem;
+        }
+
+        input, textarea, select {
+            padding: 0.5rem 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--ring);
+            box-shadow: 0 0 0 1px var(--ring);
+        }
+
+        textarea {
+            resize: vertical;
+            width: 100%;
+            min-height: 6rem;
+        }
+
+        /* Checkbox Grid */
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 1rem;
+            height: 1rem;
+        }
+
+        .checkbox-item label {
+            font-weight: normal;
+            cursor: pointer;
+            font-size: 0.875rem;
+        }
+
+        /* Select */
+        .select {
+            position: relative;
+        }
+
+        .select-trigger {
+            width: 100%;
+            padding: 0.5rem 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .select-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            margin-top: 0.25rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+            max-height: 15rem;
+            overflow-y: auto;
+        }
+
+        .select-content.show {
+            display: block;
+        }
+
+        .select-item {
+            padding: 0.5rem 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .select-item:hover {
+            background-color: var(--muted);
+        }
+
+        /* Terms */
+        .terms {
+            padding: 1rem;
+            background-color: var(--muted);
+            border-radius: var(--radius);
+        }
+
+        .terms-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .terms-item input[type="checkbox"] {
+            margin-top: 0.25rem;
+        }
+
+        .terms-item label {
+            font-weight: normal;
+            font-size: 0.875rem;
+        }
+
+        /* Alert */
+        .alert {
+            padding: 0.75rem 1rem;
+            background-color: rgba(220, 38, 38, 0.1);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .alert i {
+            color: var(--destructive);
+            font-size: 1rem;
+            margin-top: 0.125rem;
+        }
+
+        .alert-description {
+            font-size: 0.875rem;
+            color: var(--muted-foreground);
+        }
+
+        /* Button */
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .button:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .button i {
+            margin-right: 0.5rem;
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            gap: 1rem;
+            font-size: 0.875rem;
+        }
+
+        @media (min-width: 768px) {
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-item i {
+            margin-right: 0.5rem;
+            color: var(--muted-foreground);
+        }
+
+        /* Divider */
+        .divider {
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <h1>Join Our Volunteer Team</h1>
+            <p>
+                Make a difference in your community by volunteering with Hayatu Charity Foundation. 
+                Your time and skills can transform lives and bring hope to those in need.
+            </p>
+        </div>
+
+        <div class="grid">
+            <!-- Volunteer Opportunities Sidebar -->
+            <div class="space-y-6">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <i class="fas fa-heart" style="color: var(--primary);"></i>
+                            Volunteer Opportunities
+                        </div>
+                        <p class="card-description">Choose an area where you'd like to help</p>
+                    </div>
+                    <div class="card-content">
+                        <!-- Opportunity 1 -->
+                        <div class="opportunity" >
+                            <div class="opportunity-header">
+                                <h3 class="opportunity-title">Education & Tutoring</h3>
+                                <span class="badge badge-destructive">Urgent</span>
+                            </div>
+                            <p class="opportunity-description">
+                                Help children with homework and basic literacy/numeracy skills
+                            </p>
+                            <div class="opportunity-meta">
+                                <div class="meta-item">
+                                    <i class="far fa-clock"></i>
+                                    2-4 hours/week
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Community Center
+                                </div>
+                            </div>
+                            <div class="opportunity-details">
+                                <h4>Requirements:</h4>
+                                <ul class="requirements-list">
+                                    <li>Patience and passion for teaching</li>
+                                    <li>Background in education preferred</li>
+                                    <li>Commitment of at least 3 months</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Opportunity 2 -->
+                        <div class="opportunity" >
+                            <div class="opportunity-header">
+                                <h3 class="opportunity-title">Food Distribution</h3>
+                            </div>
+                            <p class="opportunity-description">
+                                Assist with packing and distributing food packages to families in need
+                            </p>
+                            <div class="opportunity-meta">
+                                <div class="meta-item">
+                                    <i class="far fa-clock"></i>
+                                    3-5 hours/week
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Main Warehouse
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Opportunity 3 -->
+                        <div class="opportunity">
+                            <div class="opportunity-header">
+                                <h3 class="opportunity-title">Elderly Care</h3>
+                            </div>
+                            <p class="opportunity-description">
+                                Provide companionship and assistance to elderly community members
+                            </p>
+                            <div class="opportunity-meta">
+                                <div class="meta-item">
+                                    <i class="far fa-clock"></i>
+                                    2-3 hours/week
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Various Locations
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Opportunity 4 -->
+                        <div class="opportunity" >
+                            <div class="opportunity-header">
+                                <h3 class="opportunity-title">Environmental Cleanup</h3>
+                                <span class="badge badge-destructive">Urgent</span>
+                            </div>
+                            <p class="opportunity-description">
+                                Participate in community cleanup and gardening projects
+                            </p>
+                            <div class="opportunity-meta">
+                                <div class="meta-item">
+                                    <i class="far fa-clock"></i>
+                                    Flexible hours
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Community Areas
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Why Volunteer -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <i class="fas fa-star" style="color: var(--accent);"></i>
+                            Why Volunteer With Us?
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle benefit-icon"></i>
+                            <div class="benefit-content">
+                                <h4>Make Real Impact</h4>
+                                <p>See direct results of your efforts in the community</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle benefit-icon"></i>
+                            <div class="benefit-content">
+                                <h4>Skill Development</h4>
+                                <p>Gain new skills and experiences</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle benefit-icon"></i>
+                            <div class="benefit-content">
+                                <h4>Community Network</h4>
+                                <p>Connect with like-minded individuals</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle benefit-icon"></i>
+                            <div class="benefit-content">
+                                <h4>Flexible Schedule</h4>
+                                <p>Work around your availability</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Registration Form -->
+            <div class="col-span-2">
+                <div class="card" style="box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <i class="fas fa-users" style="color: var(--primary);"></i>
+                            Volunteer Registration
+                        </div>
+                        <p class="card-description">Fill out this form to join our volunteer team</p>
+                    </div>
+                    <div class="card-content">
+                        <!-- Personal Information -->
+                        <div class="form-section">
+                            <h3>Personal Information</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" placeholder="Enter your first name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" placeholder="Enter your last name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" placeholder="Enter your email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" placeholder="Enter your phone number">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Areas of Interest -->
+                        <div class="form-section">
+                            <label class="form-section-title">Areas of Interest</label>
+                            <div class="checkbox-grid">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="interest-education" checked>
+                                    <label for="interest-education">Education & Tutoring</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="interest-food">
+                                    <label for="interest-food">Food Distribution</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="interest-elderly">
+                                    <label for="interest-elderly">Elderly Care</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="interest-environmental">
+                                    <label for="interest-environmental">Environmental Cleanup</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Availability -->
+                        <div class="form-section">
+                            <label for="availability">Availability</label>
+                            <div class="select">
+                                <div class="select-trigger" onclick="toggleSelect()">
+                                    <span>Select your availability</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="select-content" id="availability-select">
+                                    <div class="select-item" onclick="selectOption('Weekdays')">Weekdays</div>
+                                    <div class="select-item" onclick="selectOption('Weekends')">Weekends</div>
+                                    <div class="select-item" onclick="selectOption('Evenings')">Evenings</div>
+                                    <div class="select-item" onclick="selectOption('Flexible')">Flexible</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Motivation -->
+                        <div class="form-section">
+                            <label for="motivation">Why do you want to volunteer with us? *</label>
+                            <textarea id="motivation" placeholder="Tell us about your motivation to volunteer"></textarea>
+                        </div>
+
+                        <!-- Terms -->
+                        <div class="form-section">
+                            <div class="terms">
+                                <div class="terms-item">
+                                    <input type="checkbox" id="terms">
+                                    <label for="terms">I agree to the volunteer terms and conditions *</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Submit -->
+                        <div class="divider">
+                            <div class="alert">
+                                <i class="fas fa-exclamation-circle"></i>
+                                <p class="alert-description">
+                                    Our volunteer coordinator will contact you within 5-7 business days.
+                                </p>
+                            </div>
+
+                            <button class="button">
+                                <i class="fas fa-check-circle"></i>
+                                Submit Application
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="card" style="margin-top: 1.5rem;">
+                    <div class="card-header">
+                        <div class="card-title">Questions? Contact Our Volunteer Coordinator</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="contact-grid">
+                            <div class="contact-item">
+                                <i class="far fa-envelope"></i>
+                                volunteers@hayatucharityfoundation.com
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                +256706171731 / +256785656038
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSelect() {
+            const selectContent = document.getElementById('availability-select');
+            selectContent.classList.toggle('show');
+        }
+
+        function selectOption(value) {
+            const selectTrigger = document.querySelector('.select-trigger');
+            selectTrigger.querySelector('span').textContent = value;
+            document.getElementById('availability-select').classList.remove('show');
+            
+            // Close the dropdown when clicking outside
+            event.stopPropagation();
+        }
+
+        // Close dropdown when clicking elsewhere
+        window.onclick = function(event) {
+            if (!event.target.matches('.select-trigger') && !event.target.matches('.select-trigger *')) {
+                document.getElementById('availability-select').classList.remove('show');
+            }
+        }
+    </script>
+    <script>
+        document.querySelector('.button').addEventListener('click', () => {
+            const firstName = document.getElementById('firstName').value;
+            const lastName  = document.getElementById('lastName').value;
+            const email     = document.getElementById('email').value;
+            const phone     = document.getElementById('phone').value;
+            const motivation = document.getElementById('motivation').value;
+            const availability = document.querySelector('.select-trigger span').textContent;
+
+            // Collect selected areas of interest
+            const areas = [];
+            document.querySelectorAll('.checkbox-item input:checked').forEach(checkbox => {
+                areas.push(checkbox.nextElementSibling.textContent.trim());
+            });
+
+            const terms = document.getElementById('terms').checked ? 1 : 0;
+
+            fetch('submit_volunteer.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    firstName,
+                    lastName,
+                    email,
+                    phone,
+                    areas,
+                    availability,
+                    motivation,
+                    terms
+                })
+            })
+            .then(res => res.json())
+            .then(data => window.location.href = 'application-success.html')
+            .catch(err => alert('Submission failed'));
+        });
+
+    </script>
+</body>
+</html>
