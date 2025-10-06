@@ -557,11 +557,11 @@ if (!$_SESSION['role'] == 'admin') {
                 var file = fileInput.files[0];
 
                 // ✅ Check file size before uploading
-                var maxSize = 40 * 1024 * 1024; // 40MB
+                var maxSize = 55 * 1024 * 1024; // 55MB
                 if (file && file.size > maxSize) {
                     var sizeMB = (file.size / (1024 * 1024)).toFixed(2);
                     statusElement.removeClass('success').addClass('error')
-                        .text("File is " + sizeMB + " MB. Maximum allowed size is 40MB.");
+                        .text("File is " + sizeMB + " MB. Maximum allowed size is 55MB.");
                     return; // stop here, don’t upload
                 }
 
